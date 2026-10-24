@@ -1,3 +1,10 @@
-[gd_scene format=2]
+[gd_scene load_steps=2 format=2]
 
-[node name="player" type="AnimatedSprite"]
+[ext_resource path="res://entities/player/player1.png" type="Texture" id=1]
+
+[node name="player" type="KinematicBody2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+hframes = 8
+vframes = 5
