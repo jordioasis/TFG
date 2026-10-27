@@ -1,6 +1,7 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://entities/player/player1_jgc.png" type="Texture" id=1]
+[ext_resource path="res://entities/player/player.gd" type="Script" id=2]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 12.0
@@ -120,9 +121,10 @@ tracks/0/keys = {
 }
 
 [node name="player" type="KinematicBody2D"]
+position = Vector2( 110, 63 )
+script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 1, -1 )
 texture = ExtResource( 1 )
 hframes = 4
 vframes = 4
@@ -133,7 +135,7 @@ position = Vector2( 1, 0 )
 shape = SubResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-autoplay = "caminar_down"
+autoplay = "idle_front"
 anims/RESET = SubResource( 2 )
 anims/caminar_down = SubResource( 3 )
 anims/caminar_left = SubResource( 4 )
