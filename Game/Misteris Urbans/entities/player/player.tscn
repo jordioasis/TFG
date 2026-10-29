@@ -148,3 +148,5 @@ anims/caminar_right = SubResource( 5 )
 anims/caminar_up = SubResource( 6 )
 anims/idle_back = SubResource( 7 )
 anims/idle_front = SubResource( 8 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
