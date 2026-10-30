@@ -1,38 +1,29 @@
 extends KinematicBody2D
 
-const MOVE_SPEED = 150.0
-const SCREEN_WIDTH = 640
-const SCREEN_HEIGHT = 360
+const MOVE_SPEED = 100
+
+var velocity = Vector2.ZERO
+
+onready var animationPlayer = $AnimationPlayer
+onready var animationTree =$AnimationTree
+onready var animationState = animationTree.get("parameters/playback")
 
 
-
-func _process(delta):
-	var input_dir = Vector2()
-	if Input.is_key_pressed(KEY_UP):
-		input_dir.y -= 1.0
-		$AnimationPlayer.play("caminar_up")
-	elif Input.is_key_pressed(KEY_DOWN):
-		input_dir.y += 1.0
-		$AnimationPlayer.play("caminar_down")
-	elif Input.is_key_pressed(KEY_LEFT):
-		input_dir.x -= 1.0
-		$AnimationPlayer.play("caminar_left")
-	elif Input.is_key_pressed(KEY_RIGHT):
-		input_dir.x += 1.0
-		$AnimationPlayer.play("caminar_right")
+func _physics_process(delta):
+	var input_vector = Vector2.ZERO
+	input_vector.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
+	input_vector.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
+	input_vector = input_vector.normalized()
+	
+	if input_vector != Vector2.ZERO:
+		animationTree.set("parameters/idle/blend_position", input_vector)
+		animationTree.set("parameters/caminar/blend_position", input_vector)
+		animationState.travel("caminar")
+		velocity = input_vector * MOVE_SPEED
 	else:
-		$AnimationPlayer.play("idle_front")
+		animationState.travel("idle")
+		velocity = Vector2.ZERO
 		
-	if position.x < 0.0:
-	 position.x = 0.0
-	elif position.x > SCREEN_WIDTH:
-	 position.x = SCREEN_WIDTH
-	if position.y < 0.0:
-	 position.y = 0.0
-	elif position.y > SCREEN_HEIGHT:
-	 position.y = SCREEN_HEIGHT
-	
-	position += (delta * MOVE_SPEED) * input_dir
-	
+	move_and_collide(velocity * delta)
 	
 

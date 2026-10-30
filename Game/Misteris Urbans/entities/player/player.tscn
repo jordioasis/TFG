@@ -1,10 +1,10 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://entities/player/player1_jgc.png" type="Texture" id=1]
 [ext_resource path="res://entities/player/player.gd" type="Script" id=2]
 
 [sub_resource type="CapsuleShape2D" id=1]
-radius = 12.0
+radius = 8.0
 height = 0.0
 
 [sub_resource type="Animation" id=2]
@@ -26,7 +26,7 @@ tracks/0/keys = {
 resource_name = "caminar_down"
 length = 0.8
 loop = true
-step = 0.4
+step = 0.2
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -34,10 +34,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.4 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.22, 0.45, 0.66 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 0, 1 ]
+"values": [ 0, 1, 0, 1 ]
 }
 
 [sub_resource type="Animation" id=4]
@@ -80,6 +80,7 @@ tracks/0/keys = {
 resource_name = "caminar_up"
 length = 0.8
 loop = true
+step = 0.2
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -87,10 +88,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.4 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.18, 0.35, 0.56 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 2, 3 ]
+"values": [ 2, 3, 2, 3 ]
 }
 
 [sub_resource type="Animation" id=7]
@@ -125,22 +126,83 @@ tracks/0/keys = {
 "values": [ 8, 9, 10, 11 ]
 }
 
+[sub_resource type="AnimationNodeAnimation" id=9]
+animation = "caminar_down"
+
+[sub_resource type="AnimationNodeAnimation" id=10]
+animation = "caminar_right"
+
+[sub_resource type="AnimationNodeAnimation" id=11]
+animation = "caminar_left"
+
+[sub_resource type="AnimationNodeAnimation" id=12]
+animation = "caminar_up"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id=13]
+blend_point_0/node = SubResource( 9 )
+blend_point_0/pos = Vector2( 0, 1.1 )
+blend_point_1/node = SubResource( 10 )
+blend_point_1/pos = Vector2( 1, 0 )
+blend_point_2/node = SubResource( 11 )
+blend_point_2/pos = Vector2( -1, 0 )
+blend_point_3/node = SubResource( 12 )
+blend_point_3/pos = Vector2( 0, -1.1 )
+min_space = Vector2( -1, -1.1 )
+max_space = Vector2( 1, 1.1 )
+blend_mode = 1
+
+[sub_resource type="AnimationNodeAnimation" id=16]
+animation = "idle_front"
+
+[sub_resource type="AnimationNodeAnimation" id=18]
+animation = "idle_front"
+
+[sub_resource type="AnimationNodeAnimation" id=23]
+animation = "idle_front"
+
+[sub_resource type="AnimationNodeAnimation" id=24]
+animation = "idle_back"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id=20]
+blend_point_0/node = SubResource( 16 )
+blend_point_0/pos = Vector2( -1, 0 )
+blend_point_1/node = SubResource( 18 )
+blend_point_1/pos = Vector2( 1, 0 )
+blend_point_2/node = SubResource( 23 )
+blend_point_2/pos = Vector2( 0, 1 )
+blend_point_3/node = SubResource( 24 )
+blend_point_3/pos = Vector2( 0, -1 )
+blend_mode = 1
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=21]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=22]
+switch_mode = 1
+
+[sub_resource type="AnimationNodeStateMachine" id=14]
+states/caminar/node = SubResource( 13 )
+states/caminar/position = Vector2( 269, 51 )
+states/idle/node = SubResource( 20 )
+states/idle/position = Vector2( 86, 51 )
+transitions = [ "idle", "caminar", SubResource( 21 ), "caminar", "idle", SubResource( 22 ) ]
+start_node = "idle"
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=15]
+
 [node name="player" type="KinematicBody2D"]
-position = Vector2( 110, 63 )
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0, -17 )
 texture = ExtResource( 1 )
 hframes = 4
 vframes = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2( 1, 0 )
+position = Vector2( 1, -9 )
 shape = SubResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-autoplay = "idle_front"
 anims/RESET = SubResource( 2 )
 anims/caminar_down = SubResource( 3 )
 anims/caminar_left = SubResource( 4 )
@@ -149,4 +211,16 @@ anims/caminar_up = SubResource( 6 )
 anims/idle_back = SubResource( 7 )
 anims/idle_front = SubResource( 8 )
 
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource( 14 )
+anim_player = NodePath("../AnimationPlayer")
+active = true
+parameters/playback = SubResource( 15 )
+parameters/caminar/blend_position = Vector2( 0, 0 )
+parameters/idle/blend_position = Vector2( -0.0202532, 0.12069 )
+
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( -2, -2 )
+current = true
+smoothing_enabled = true
+smoothing_speed = 2.0
