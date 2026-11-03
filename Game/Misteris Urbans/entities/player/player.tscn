@@ -214,7 +214,6 @@ anims/idle_front = SubResource( 8 )
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource( 14 )
 anim_player = NodePath("../AnimationPlayer")
-active = true
 parameters/playback = SubResource( 15 )
 parameters/caminar/blend_position = Vector2( 0, 0 )
 parameters/idle/blend_position = Vector2( -0.0202532, 0.12069 )
