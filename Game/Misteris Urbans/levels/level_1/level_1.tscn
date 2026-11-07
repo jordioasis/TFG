@@ -1,8 +1,9 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://levels/level_1/Tiles.png" type="Texture" id=1]
 [ext_resource path="res://entities/player/player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://levels/level_1/Building.png" type="Texture" id=3]
+[ext_resource path="res://levels/level_1/Timer.gd" type="Script" id=4]
 
 [sub_resource type="ConvexPolygonShape2D" id=2]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -217,7 +218,17 @@ tile_data = PoolIntArray( -2490368, 0, 0, -2490367, 0, 0, -2490366, 0, 0, -24903
 [node name="buildings" type="TileMap" parent="."]
 tile_set = SubResource( 12 )
 format = 1
-tile_data = PoolIntArray( -589824, 1, 0, -458740, 1, 0, 196608, 1, 0, 262156, 1, 0 )
+tile_data = PoolIntArray( -589824, 1, 0, -458740, 1, 0, -196598, 1, 0, 196608, 1, 0, 262156, 1, 0 )
 
 [node name="player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 320, 176 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 300.0
+one_shot = true
+autostart = true
+script = ExtResource( 4 )
+
+[node name="Label" type="Label" parent="."]
+margin_right = 240.0
+margin_bottom = 64.0

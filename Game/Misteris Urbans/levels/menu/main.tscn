@@ -8,3 +8,5 @@
 position = Vector2( 319, 256 )
 scale = Vector2( 1.24609, 1 )
 texture = ExtResource( 1 )
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
