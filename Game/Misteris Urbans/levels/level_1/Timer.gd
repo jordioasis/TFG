@@ -2,7 +2,7 @@ extends Node
 
 export var tiempo_restante: float = 300.0
 onready var timer = $"."
-onready var label = $"../Label"
+onready var label = $"../CanvasLayer/Label"
 
 func _ready() -> void:
 	timer.wait_time = tiempo_restante
