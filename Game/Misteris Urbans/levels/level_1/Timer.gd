@@ -9,7 +9,7 @@ func _ready() -> void:
 	timer.connect("timeout", self, "_on_Timer_timeout")
 	timer.start()
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	var tiempo_total_segundos = int(ceil(timer.time_left))
 	var minutos = tiempo_total_segundos / 60
 	var segundos = tiempo_total_segundos % 60
