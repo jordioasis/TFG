@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Road.png-ed40a69c5066f81cb24cba9624df7343.stex"
+path="res://.import/TilesetRoads.png-a95fddedf540740a78125df8238fbc3b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://entities/grounds/Road.png"
-dest_files=[ "res://.import/Road.png-ed40a69c5066f81cb24cba9624df7343.stex" ]
+source_file="res://entities/grounds/TilesetRoads.png"
+dest_files=[ "res://.import/TilesetRoads.png-a95fddedf540740a78125df8238fbc3b.stex" ]
 
 [params]
 

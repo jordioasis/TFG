@@ -1,0 +1,10 @@
+[gd_scene format=2]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+format = 1
+
+[node name="WitnessesContainer" type="Node2D" parent="."]
+
+[node name="CluesContainer" type="Node2D" parent="."]
