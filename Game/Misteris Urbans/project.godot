@@ -11,12 +11,8 @@ config_version=4
 [application]
 
 config/name="Misteris Urbans"
-run/main_scene="res://levels/level_1/level_1.tscn"
+run/main_scene="res://levels/menu/menu.tscn"
 config/icon="res://icon.png"
-
-[autoload]
-
-CaseManager="*res://CaseManager.gd"
 
 [display]
 

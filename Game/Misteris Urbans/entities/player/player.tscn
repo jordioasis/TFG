@@ -221,5 +221,4 @@ parameters/idle/blend_position = Vector2( -0.0202532, 0.12069 )
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( -2, -2 )
 current = true
-smoothing_enabled = true
 smoothing_speed = 2.0
