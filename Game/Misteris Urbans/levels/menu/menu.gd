@@ -1,9 +1,9 @@
-extends Control
+extends CanvasLayer
 
 
 
 func _on_btnJugar_pressed():
-	get_tree().change_scene("res://levels/level_1/level_1.tscn")
+	get_tree().change_scene("res://levels/level/level.tscn")
 
 
 func _on_btnAleatoria_pressed():

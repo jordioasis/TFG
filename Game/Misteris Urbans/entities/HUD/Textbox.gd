@@ -5,13 +5,12 @@ onready var title = $TextboxContainer/MarginContainer/HBoxContainer/Title
 onready var text = $TextboxContainer/MarginContainer/HBoxContainer/Text
 
 
+
 func _ready():
-	pass
+	textbox_container.visible = false
 
 func hide_textbox():
-	title.text = ""
-	text.text = ""
-	textbox_container.hide()
+	textbox_container.visible = false
 	
 func show_textbox():
 	textbox_container.visible = true
