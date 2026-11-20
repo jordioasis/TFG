@@ -1,12 +1,12 @@
-extends Node
+extends Timer
 
-export var tiempo_restante: float = 300.0
+export var tiempo_restante: float = 30.0
 onready var timer = $"."
 onready var label = $"../CanvasLayer/Label"
 
 func _ready() -> void:
 	timer.wait_time = tiempo_restante
-	timer.connect("timeout", self, "_on_Timer_timeout")
+	timer.one_shot = true
 	timer.start()
 
 func _process(_delta: float) -> void:
@@ -18,6 +18,6 @@ func _process(_delta: float) -> void:
 
 
 
-func _on_Timer_timeout() -> void:
+func _on_Timer_timeout():
+	set_process(false)
 	label.text = "¡Tiempo terminado!"
-
