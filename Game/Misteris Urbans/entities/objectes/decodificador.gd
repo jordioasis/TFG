@@ -1,4 +1,4 @@
-extends CollisionShape2D
+extends Area2D
 
 
 # Declare member variables here. Examples:
@@ -19,5 +19,4 @@ func _ready():
 func _on_Area2D_body_entered(body):
 	if body.is_in_group("player"):
 		CaseManager.collected_objects.append("OBJ-03")
-	
-	queue_free()
+		get_parent().queue_free()
