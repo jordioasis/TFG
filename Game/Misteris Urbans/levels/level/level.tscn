@@ -40,7 +40,7 @@
 1/shape_one_way_margin = 0.0
 1/shapes = [  ]
 1/z_index = 0
-2/name = "TilesetRoads.png 2"
+2/name = "TilesetRoads"
 2/texture = ExtResource( 6 )
 2/tex_offset = Vector2( 0, 0 )
 2/modulate = Color( 1, 1, 1, 1 )
@@ -567,270 +567,270 @@ cell_quadrant_size = 32
 format = 1
 tile_data = PoolIntArray( -1703959, 0, 3, -1703957, 0, 0, -1703956, 0, 1, -1703955, 0, 1, -1703954, 0, 1, -1703953, 0, 5, -1703952, 0, 196609, -1703951, 0, 196609, -1703950, 0, 196609, -1703949, 0, 196609, -1703948, 0, 196609, -1703947, 0, 196609, -1703946, 0, 196609, -1703945, 0, 196609, -1703944, 0, 196609, -1703943, 0, 196609, -1703942, 0, 196610, -1638424, 0, 4, -1638423, 0, 196616, -1638422, 0, 196609, -1638421, 0, 196614, -1638420, 0, 131073, -1638419, 0, 131073, -1638418, 0, 131073, -1638417, 0, 131074, -1638405, 0, 196608, -1638404, 0, 196609, -1638403, 0, 196609, -1638402, 0, 196609, -1638401, 0, 196609, -1703936, 0, 196609, -1703935, 0, 196609, -1703934, 0, 196609, -1703933, 0, 196609, -1703932, 0, 196609, -1703931, 0, 196609, -1703930, 0, 196609, -1703929, 0, 196609, -1703928, 0, 196609, -1703927, 0, 196609, -1703926, 0, 196609, -1703925, 0, 196609, -1703924, 0, 196609, -1703923, 0, 196609, -1703922, 0, 196609, -1703921, 0, 196609, -1703920, 0, 7, -1703911, 0, 0, -1703910, 0, 1, -1703909, 0, 1, -1703908, 0, 1, -1703907, 0, 1, -1703906, 0, 1, -1703905, 0, 1, -1703904, 0, 1, -1703903, 0, 1, -1703902, 0, 1, -1703901, 0, 1, -1703900, 0, 1, -1703899, 0, 1, -1703898, 0, 1, -1703897, 0, 2, -1572888, 0, 65539, -1572880, 0, 0, -1572879, 0, 1, -1572878, 0, 1, -1572877, 0, 2, -1638384, 0, 131076, -1638383, 0, 1, -1638382, 0, 1, -1638381, 0, 1, -1638380, 0, 1, -1638379, 0, 1, -1638378, 0, 1, -1638377, 0, 1, -1638376, 0, 1, -1638375, 0, 131078, -1638374, 0, 65537, -1638373, 0, 65537, -1638372, 0, 65537, -1638371, 0, 65537, -1638370, 0, 65537, -1638369, 0, 65537, -1638368, 0, 65537, -1638367, 0, 65537, -1638366, 0, 65537, -1638365, 0, 65537, -1638364, 0, 65537, -1638363, 0, 65537, -1638362, 0, 65537, -1638361, 0, 65538, -1507352, 0, 131076, -1507351, 0, 1, -1507350, 0, 1, -1507349, 0, 1, -1507348, 0, 1, -1507347, 0, 1, -1507346, 0, 1, -1507345, 0, 1, -1507344, 0, 131078, -1507343, 0, 65537, -1507342, 0, 65537, -1507341, 0, 131077, -1507340, 0, 1, -1507339, 0, 1, -1507338, 0, 1, -1507337, 0, 1, -1507336, 0, 1, -1507335, 0, 1, -1507334, 0, 1, -1507333, 0, 1, -1507332, 0, 1, -1507331, 0, 1, -1507330, 0, 1, -1507329, 0, 1, -1572864, 0, 1, -1572863, 0, 1, -1572862, 0, 1, -1572861, 0, 1, -1572860, 0, 1, -1572859, 0, 1, -1572858, 0, 1, -1572857, 0, 1, -1572856, 0, 1, -1572855, 0, 1, -1572854, 0, 1, -1572853, 0, 1, -1572852, 0, 1, -1572851, 0, 1, -1572850, 0, 1, -1572849, 0, 1, -1572848, 0, 131078, -1572847, 0, 65537, -1572846, 0, 65537, -1572845, 0, 65537, -1572844, 0, 65537, -1572843, 0, 65537, -1572842, 0, 65537, -1572841, 0, 65537, -1572840, 0, 65537, -1572839, 0, 65537, -1572838, 0, 65537, -1572837, 0, 65537, -1572836, 0, 65537, -1572835, 0, 65537, -1572834, 0, 65537, -1572833, 0, 65537, -1572832, 0, 65537, -1572831, 0, 65537, -1572830, 0, 65537, -1572829, 0, 65537, -1572828, 0, 65537, -1572827, 0, 65537, -1572826, 0, 65537, -1572825, 0, 131077, -1572824, 0, 2, -1441816, 0, 131072, -1441815, 0, 131073, -1441814, 0, 131073, -1441813, 0, 131073, -1441812, 0, 131073, -1441811, 0, 131073, -1441810, 0, 131073, -1441809, 0, 131073, -1441808, 0, 131073, -1441807, 0, 131073, -1441806, 0, 131073, -1441805, 0, 131073, -1441804, 0, 131073, -1441803, 0, 131073, -1441802, 0, 131073, -1441801, 0, 131073, -1441800, 0, 131073, -1441799, 0, 131073, -1441798, 0, 131073, -1441797, 0, 131073, -1441796, 0, 131073, -1441795, 0, 131073, -1441794, 0, 131073, -1441793, 0, 131073, -1507328, 0, 131073, -1507327, 0, 131073, -1507326, 0, 131073, -1507325, 0, 131073, -1507324, 0, 131073, -1507323, 0, 131073, -1507322, 0, 131073, -1507321, 0, 131073, -1507320, 0, 131073, -1507319, 0, 131073, -1507318, 0, 131073, -1507317, 0, 131073, -1507316, 0, 131073, -1507315, 0, 131073, -1507314, 0, 131073, -1507313, 0, 131073, -1507312, 0, 131073, -1507311, 0, 131073, -1507310, 0, 131073, -1507309, 0, 131073, -1507308, 0, 131073, -1507307, 0, 131073, -1507306, 0, 131073, -1507305, 0, 131073, -1507304, 0, 131073, -1507303, 0, 131073, -1507302, 0, 131073, -1507301, 0, 131073, -1507300, 0, 131073, -1507299, 0, 131073, -1507298, 0, 131073, -1507297, 0, 131073, -1507296, 0, 131073, -1507295, 0, 131073, -1507294, 0, 131073, -1507293, 0, 131073, -1507292, 0, 131073, -1507291, 0, 131073, -1507290, 0, 131073, -1507289, 0, 131073, -1507288, 0, 196613, -1507287, 0, 196609, -1507286, 0, 7, -1376282, 0, 196608, -1376281, 0, 7, -1441750, 0, 262148, -1441749, 0, 196610, -1310745, 0, 65539, -1376214, 0, 65539, -1245209, 0, 131076, -1245208, 0, 1, -1245207, 0, 2, -1310678, 0, 196612, -1310677, 0, 7, -1179673, 0, 65536, -1179672, 0, 65541, -1179671, 0, 131074, -1245141, 0, 65539, -1114137, 0, 65536, -1114136, 0, 65538, -1179606, 0, 4, -1179605, 0, 196615, -1048601, 0, 65536, -1048600, 0, 65538, -1114070, 0, 65539, -983065, 0, 65536, -983064, 0, 65538, -1048534, 0, 65539, -917529, 0, 65536, -917528, 0, 65538, -982998, 0, 65539, -851993, 0, 65536, -851992, 0, 65538, -917462, 0, 65539, -786458, 0, 0, -786457, 0, 131078, -786456, 0, 65538, -851926, 0, 196612, -851925, 0, 7, -720922, 0, 65536, -720921, 0, 65537, -720920, 0, 65538, -786389, 0, 196612, -786388, 0, 7, -655387, 0, 0, -655386, 0, 131078, -655385, 0, 65537, -655384, 0, 65538, -720852, 0, 65539, -589851, 0, 65536, -589850, 0, 65537, -589849, 0, 65537, -589848, 0, 65538, -655316, 0, 65539, -524315, 0, 131072, -524314, 0, 131073, -524313, 0, 65542, -524312, 0, 65538, -589780, 0, 65539, -458777, 0, 65536, -458776, 0, 65538, -524245, 0, 4, -524244, 0, 196615, -393241, 0, 131072, -393240, 0, 65543, -458709, 0, 65539, -327704, 0, 65539, -393173, 0, 196612, -393172, 0, 7, -262169, 0, 4, -262168, 0, 196615, -327636, 0, 196612, -327635, 0, 7, -196634, 0, 0, -196633, 0, 131079, -262099, 0, 65539, -131099, 0, 0, -131098, 0, 131078, -131097, 0, 65538, -196563, 0, 65539, -65563, 0, 131072, -65562, 0, 131073, -65561, 0, 65543, -131027, 0, 65539, -25, 0, 196612, -24, 0, 7, -65491, 0, 65539, 65512, 0, 65539, 44, 0, 4, 45, 0, 196615, 131048, 0, 65539, 65580, 0, 65539, 196583, 0, 4, 196584, 0, 196615, 131116, 0, 131075, 262119, 0, 65539, 196651, 0, 3, 327654, 0, 4, 327655, 0, 196615, 262187, 0, 65539, 393190, 0, 65539, 327723, 0, 131075, 458726, 0, 65539, 393258, 0, 3, 524262, 0, 196612, 524263, 0, 7, 458794, 0, 65539, 589799, 0, 65539, 524330, 0, 65539, 655335, 0, 65539, 589866, 0, 65539, 720871, 0, 131076, 720872, 0, 2, 655402, 0, 196612, 655403, 0, 7, 786407, 0, 65540, 786408, 0, 131074, 720939, 0, 196612, 720940, 0, 7, 851943, 0, 65539, 786476, 0, 196612, 786477, 0, 7, 917479, 0, 131075, 852013, 0, 65539, 983014, 0, 3, 917548, 0, 4, 917549, 0, 196615, 1048550, 0, 65539, 983084, 0, 131075, 1114086, 0, 196612, 1114087, 0, 7, 1048619, 0, 3, 1179623, 0, 65539, 1114155, 0, 65539, 1245159, 0, 131076, 1245160, 0, 2, 1179691, 0, 196612, 1179692, 0, 7, 1310695, 0, 65540, 1310696, 0, 131074, 1245228, 0, 65539, 1376231, 0, 65539, 1310764, 0, 262148, 1310765, 0, 196610, 1441766, 0, 4, 1441767, 0, 196615, 1376300, 0, 65539, 1507302, 0, 65539, 1441836, 0, 131076, 1441837, 0, 5, 1441838, 0, 196610, 1572838, 0, 65539, 1507372, 0, 65540, 1507373, 0, 131074, 1638374, 0, 131076, 1638375, 0, 2, 1572908, 0, 131075, 1703910, 0, 65536, 1703911, 0, 65538, 1638443, 0, 3, 1769446, 0, 131072, 1769447, 0, 65543, 1703979, 0, 196612, 1703980, 0, 7, 1834983, 0, 65539, 1769516, 0, 196612, 1769517, 0, 196610, 1900519, 0, 65539, 1835051, 0, 3, 1966055, 0, 65539, 1900586, 0, 4, 1900587, 0, 196615, 2031591, 0, 65539, 1966122, 0, 65539, 2097127, 0, 65539, 2031658, 0, 196612, 2031659, 0, 7, 2162663, 0, 65539, 2097195, 0, 65539, 2228196, 0, 3, 2228199, 0, 65539, 2162725, 0, 196608, 2162726, 0, 7, 2162730, 0, 4, 2162731, 0, 196615, 2293732, 0, 65539, 2293735, 0, 196612, 2293736, 0, 7, 2228253, 0, 4, 2228254, 0, 196609, 2228255, 0, 7, 2228260, 0, 3, 2228262, 0, 196612, 2228263, 0, 196609, 2228264, 0, 196609, 2228265, 0, 196609, 2228266, 0, 196615, 2359268, 0, 196612, 2359269, 0, 7, 2359272, 0, 131075, 2359275, 0, 3, 2293789, 0, 131075, 2293791, 0, 196612, 2293792, 0, 196609, 2293793, 0, 7, 2293795, 0, 4, 2293796, 0, 196615, 2424805, 0, 196612, 2424806, 0, 196609, 2424807, 0, 7, 2424809, 0, 4, 2424810, 0, 196609, 2424811, 0, 196616, 2424812, 0, 7, 2424816, 0, 196608, 2424817, 0, 196609, 2424818, 0, 7, 2424820, 0, 4, 2424821, 0, 196609, 2424822, 0, 196609, 2424823, 0, 196609, 2424824, 0, 196609, 2424825, 0, 196609, 2424826, 0, 196609, 2424827, 0, 196609, 2424828, 0, 7, 2359299, 0, 0, 2359300, 0, 2, 2359316, 0, 4, 2359317, 0, 196609, 2359318, 0, 196609, 2359319, 0, 196609, 2359320, 0, 196609, 2359321, 0, 7, 2359324, 0, 196611, 2359329, 0, 196612, 2359330, 0, 196609, 2359331, 0, 196615, 2490343, 0, 196612, 2490344, 0, 196609, 2490345, 0, 196615, 2490348, 0, 196612, 2490349, 0, 196609, 2490350, 0, 196609, 2490351, 0, 196610, 2490354, 0, 196612, 2490355, 0, 196609, 2490356, 0, 196615, 2490364, 0, 196612, 2490365, 0, 6, 2490366, 0, 5, 2490367, 0, 196609, 2424832, 0, 196609, 2424833, 0, 196609, 2424834, 0, 196609, 2424835, 0, 196614, 2424836, 0, 196613, 2424837, 0, 196610, 2424842, 0, 196608, 2424843, 0, 196609, 2424844, 0, 7, 2424851, 0, 4, 2424852, 0, 196615, 2424857, 0, 196612, 2424858, 0, 6, 2424859, 0, 2, 2555901, 0, 131072, 2555902, 0, 131074, 2490374, 0, 196608, 2490375, 0, 196609, 2490376, 0, 196609, 2490377, 0, 196610, 2490380, 0, 196612, 2490381, 0, 6, 2490382, 0, 5, 2490383, 0, 196609, 2490384, 0, 196609, 2490385, 0, 196609, 2490386, 0, 196609, 2490387, 0, 196615, 2490394, 0, 131072, 2490395, 0, 131074, 2555917, 0, 131072, 2555918, 0, 131074 )
 
-[node name="YSort" type="YSort" parent="."]
+[node name="elementsPantalla" type="YSort" parent="."]
 
-[node name="player" parent="YSort" instance=ExtResource( 2 )]
+[node name="player" parent="elementsPantalla" instance=ExtResource( 2 )]
 position = Vector2( -129, -315 )
 
-[node name="building1" parent="YSort" instance=ExtResource( 3 )]
+[node name="building1" parent="elementsPantalla" instance=ExtResource( 3 )]
 position = Vector2( 24, 120 )
 
-[node name="building17" parent="YSort" instance=ExtResource( 3 )]
+[node name="building17" parent="elementsPantalla" instance=ExtResource( 3 )]
 position = Vector2( -360, 776 )
 
-[node name="building18" parent="YSort" instance=ExtResource( 11 )]
+[node name="building18" parent="elementsPantalla" instance=ExtResource( 11 )]
 position = Vector2( -488, 952 )
 
-[node name="building19" parent="YSort" instance=ExtResource( 11 )]
+[node name="building19" parent="elementsPantalla" instance=ExtResource( 11 )]
 position = Vector2( -472, 400 )
 
-[node name="building20" parent="YSort" instance=ExtResource( 11 )]
+[node name="building20" parent="elementsPantalla" instance=ExtResource( 11 )]
 position = Vector2( -80, 656 )
 
-[node name="building21" parent="YSort" instance=ExtResource( 11 )]
+[node name="building21" parent="elementsPantalla" instance=ExtResource( 11 )]
 position = Vector2( 192, 944 )
 
-[node name="building22" parent="YSort" instance=ExtResource( 11 )]
+[node name="building22" parent="elementsPantalla" instance=ExtResource( 11 )]
 position = Vector2( -352, 16 )
 
-[node name="building23" parent="YSort" instance=ExtResource( 11 )]
+[node name="building23" parent="elementsPantalla" instance=ExtResource( 11 )]
 position = Vector2( 184, -296 )
 
-[node name="building24" parent="YSort" instance=ExtResource( 11 )]
+[node name="building24" parent="elementsPantalla" instance=ExtResource( 11 )]
 position = Vector2( 464, -440 )
 
-[node name="building25" parent="YSort" instance=ExtResource( 3 )]
+[node name="building25" parent="elementsPantalla" instance=ExtResource( 3 )]
 position = Vector2( 656, -264 )
 
-[node name="building26" parent="YSort" instance=ExtResource( 11 )]
+[node name="building26" parent="elementsPantalla" instance=ExtResource( 11 )]
 position = Vector2( -88, -96 )
 
-[node name="building27" parent="YSort" instance=ExtResource( 3 )]
+[node name="building27" parent="elementsPantalla" instance=ExtResource( 3 )]
 position = Vector2( 920, -512 )
 
-[node name="building28" parent="YSort" instance=ExtResource( 11 )]
+[node name="building28" parent="elementsPantalla" instance=ExtResource( 11 )]
 position = Vector2( 464, 432 )
 
-[node name="building29" parent="YSort" instance=ExtResource( 11 )]
+[node name="building29" parent="elementsPantalla" instance=ExtResource( 11 )]
 position = Vector2( 464, 696 )
 
-[node name="building30" parent="YSort" instance=ExtResource( 3 )]
+[node name="building30" parent="elementsPantalla" instance=ExtResource( 3 )]
 position = Vector2( 184, 616 )
 
-[node name="building31" parent="YSort" instance=ExtResource( 3 )]
+[node name="building31" parent="elementsPantalla" instance=ExtResource( 3 )]
 position = Vector2( 624, 872 )
 
-[node name="building32" parent="YSort" instance=ExtResource( 3 )]
+[node name="building32" parent="elementsPantalla" instance=ExtResource( 3 )]
 position = Vector2( 1072, 872 )
 
-[node name="building33" parent="YSort" instance=ExtResource( 11 )]
+[node name="building33" parent="elementsPantalla" instance=ExtResource( 11 )]
 position = Vector2( 1080, 600 )
 
-[node name="building34" parent="YSort" instance=ExtResource( 11 )]
+[node name="building34" parent="elementsPantalla" instance=ExtResource( 11 )]
 position = Vector2( 904, 480 )
 
-[node name="building35" parent="YSort" instance=ExtResource( 11 )]
+[node name="building35" parent="elementsPantalla" instance=ExtResource( 11 )]
 position = Vector2( 1080, 400 )
 
-[node name="building36" parent="YSort" instance=ExtResource( 11 )]
+[node name="building36" parent="elementsPantalla" instance=ExtResource( 11 )]
 position = Vector2( 24, -480 )
 
-[node name="building2" parent="YSort" instance=ExtResource( 3 )]
+[node name="building2" parent="elementsPantalla" instance=ExtResource( 3 )]
 position = Vector2( 184, 120 )
 
-[node name="building3" parent="YSort" instance=ExtResource( 11 )]
+[node name="building3" parent="elementsPantalla" instance=ExtResource( 11 )]
 position = Vector2( 464, 160 )
 
-[node name="building4" parent="YSort" instance=ExtResource( 11 )]
+[node name="building4" parent="elementsPantalla" instance=ExtResource( 11 )]
 position = Vector2( 784, 160 )
 
-[node name="building5" parent="YSort" instance=ExtResource( 3 )]
+[node name="building5" parent="elementsPantalla" instance=ExtResource( 3 )]
 position = Vector2( 616, 120 )
 
-[node name="building6" parent="YSort" instance=ExtResource( 3 )]
+[node name="building6" parent="elementsPantalla" instance=ExtResource( 3 )]
 position = Vector2( 928, 120 )
 
-[node name="building7" parent="YSort" instance=ExtResource( 8 )]
+[node name="building7" parent="elementsPantalla" instance=ExtResource( 8 )]
 position = Vector2( -224, -304 )
 
-[node name="building8" parent="YSort" instance=ExtResource( 12 )]
+[node name="building8" parent="elementsPantalla" instance=ExtResource( 12 )]
 position = Vector2( -88, 960 )
 
-[node name="building9" parent="YSort" instance=ExtResource( 12 )]
+[node name="building9" parent="elementsPantalla" instance=ExtResource( 12 )]
 position = Vector2( -512, 544 )
 
-[node name="building10" parent="YSort" instance=ExtResource( 12 )]
+[node name="building10" parent="elementsPantalla" instance=ExtResource( 12 )]
 position = Vector2( -480, 160 )
 
-[node name="building11" parent="YSort" instance=ExtResource( 12 )]
+[node name="building11" parent="elementsPantalla" instance=ExtResource( 12 )]
 position = Vector2( 896, 616 )
 
-[node name="building12" parent="YSort" instance=ExtResource( 12 )]
+[node name="building12" parent="elementsPantalla" instance=ExtResource( 12 )]
 position = Vector2( 448, -224 )
 
-[node name="building13" parent="YSort" instance=ExtResource( 12 )]
+[node name="building13" parent="elementsPantalla" instance=ExtResource( 12 )]
 position = Vector2( 1064, -472 )
 
-[node name="building14" parent="YSort" instance=ExtResource( 12 )]
+[node name="building14" parent="elementsPantalla" instance=ExtResource( 12 )]
 position = Vector2( 424, 1128 )
 
-[node name="building15" parent="YSort" instance=ExtResource( 12 )]
+[node name="building15" parent="elementsPantalla" instance=ExtResource( 12 )]
 position = Vector2( 192, 376 )
 
-[node name="building16" parent="YSort" instance=ExtResource( 11 )]
+[node name="building16" parent="elementsPantalla" instance=ExtResource( 11 )]
 position = Vector2( 56, 440 )
 
-[node name="building37" parent="YSort" instance=ExtResource( 3 )]
+[node name="building37" parent="elementsPantalla" instance=ExtResource( 3 )]
 position = Vector2( -464, -520 )
 
-[node name="arbre2" parent="YSort" instance=ExtResource( 14 )]
+[node name="arbre2" parent="elementsPantalla" instance=ExtResource( 14 )]
 position = Vector2( -338, 292 )
 
-[node name="arbre3" parent="YSort" instance=ExtResource( 14 )]
+[node name="arbre3" parent="elementsPantalla" instance=ExtResource( 14 )]
 position = Vector2( -269, 232 )
 
-[node name="arbre4" parent="YSort" instance=ExtResource( 14 )]
+[node name="arbre4" parent="elementsPantalla" instance=ExtResource( 14 )]
 position = Vector2( -340, 448 )
 
-[node name="arbre5" parent="YSort" instance=ExtResource( 14 )]
+[node name="arbre5" parent="elementsPantalla" instance=ExtResource( 14 )]
 position = Vector2( -271, 388 )
 
-[node name="arbre6" parent="YSort" instance=ExtResource( 14 )]
+[node name="arbre6" parent="elementsPantalla" instance=ExtResource( 14 )]
 position = Vector2( -176, 292 )
 
-[node name="arbre7" parent="YSort" instance=ExtResource( 14 )]
+[node name="arbre7" parent="elementsPantalla" instance=ExtResource( 14 )]
 position = Vector2( -107, 289 )
 
-[node name="building38" parent="YSort" instance=ExtResource( 13 )]
+[node name="building38" parent="elementsPantalla" instance=ExtResource( 13 )]
 position = Vector2( -141, 249 )
 
-[node name="building39" parent="YSort" instance=ExtResource( 13 )]
+[node name="building39" parent="elementsPantalla" instance=ExtResource( 13 )]
 position = Vector2( -278, 443 )
 
-[node name="building40" parent="YSort" instance=ExtResource( 13 )]
+[node name="building40" parent="elementsPantalla" instance=ExtResource( 13 )]
 position = Vector2( -145, 424 )
 
-[node name="building41" parent="YSort" instance=ExtResource( 13 )]
+[node name="building41" parent="elementsPantalla" instance=ExtResource( 13 )]
 position = Vector2( -179, 381 )
 
-[node name="arbre8" parent="YSort" instance=ExtResource( 14 )]
+[node name="arbre8" parent="elementsPantalla" instance=ExtResource( 14 )]
 position = Vector2( -273, 291 )
 
-[node name="arbre9" parent="YSort" instance=ExtResource( 14 )]
+[node name="arbre9" parent="elementsPantalla" instance=ExtResource( 14 )]
 position = Vector2( -112, 446 )
 
-[node name="building42" parent="YSort" instance=ExtResource( 13 )]
+[node name="building42" parent="elementsPantalla" instance=ExtResource( 13 )]
 position = Vector2( -313, 1047 )
 
-[node name="building43" parent="YSort" instance=ExtResource( 13 )]
+[node name="building43" parent="elementsPantalla" instance=ExtResource( 13 )]
 position = Vector2( -555, 794 )
 
-[node name="building44" parent="YSort" instance=ExtResource( 13 )]
+[node name="building44" parent="elementsPantalla" instance=ExtResource( 13 )]
 position = Vector2( 40, 869 )
 
-[node name="building45" parent="YSort" instance=ExtResource( 13 )]
+[node name="building45" parent="elementsPantalla" instance=ExtResource( 13 )]
 position = Vector2( 607, 606 )
 
-[node name="building46" parent="YSort" instance=ExtResource( 13 )]
+[node name="building46" parent="elementsPantalla" instance=ExtResource( 13 )]
 position = Vector2( -77, 1177 )
 
-[node name="building47" parent="YSort" instance=ExtResource( 13 )]
+[node name="building47" parent="elementsPantalla" instance=ExtResource( 13 )]
 position = Vector2( 533, 1248 )
 
-[node name="building48" parent="YSort" instance=ExtResource( 13 )]
+[node name="building48" parent="elementsPantalla" instance=ExtResource( 13 )]
 position = Vector2( 912, 901 )
 
-[node name="building49" parent="YSort" instance=ExtResource( 13 )]
+[node name="building49" parent="elementsPantalla" instance=ExtResource( 13 )]
 position = Vector2( 403, 1016 )
 
-[node name="building50" parent="YSort" instance=ExtResource( 13 )]
+[node name="building50" parent="elementsPantalla" instance=ExtResource( 13 )]
 position = Vector2( -726, 1047 )
 
-[node name="building51" parent="YSort" instance=ExtResource( 13 )]
+[node name="building51" parent="elementsPantalla" instance=ExtResource( 13 )]
 position = Vector2( -722, 561 )
 
-[node name="building52" parent="YSort" instance=ExtResource( 13 )]
+[node name="building52" parent="elementsPantalla" instance=ExtResource( 13 )]
 position = Vector2( -507, 89 )
 
-[node name="building53" parent="YSort" instance=ExtResource( 13 )]
+[node name="building53" parent="elementsPantalla" instance=ExtResource( 13 )]
 position = Vector2( -429, -198 )
 
-[node name="building54" parent="YSort" instance=ExtResource( 13 )]
+[node name="building54" parent="elementsPantalla" instance=ExtResource( 13 )]
 position = Vector2( -210, -432 )
 
-[node name="building55" parent="YSort" instance=ExtResource( 13 )]
+[node name="building55" parent="elementsPantalla" instance=ExtResource( 13 )]
 position = Vector2( 214, -428 )
 
-[node name="building56" parent="YSort" instance=ExtResource( 13 )]
+[node name="building56" parent="elementsPantalla" instance=ExtResource( 13 )]
 position = Vector2( 889, -206 )
 
-[node name="building57" parent="YSort" instance=ExtResource( 13 )]
+[node name="building57" parent="elementsPantalla" instance=ExtResource( 13 )]
 position = Vector2( 746, 59 )
 
-[node name="building58" parent="YSort" instance=ExtResource( 13 )]
+[node name="building58" parent="elementsPantalla" instance=ExtResource( 13 )]
 position = Vector2( 1280, 174 )
 
-[node name="building59" parent="YSort" instance=ExtResource( 13 )]
+[node name="building59" parent="elementsPantalla" instance=ExtResource( 13 )]
 position = Vector2( 697, -580 )
 
-[node name="arbre10" parent="YSort" instance=ExtResource( 14 )]
+[node name="arbre10" parent="elementsPantalla" instance=ExtResource( 14 )]
 position = Vector2( 1094, 1187 )
 
-[node name="arbre11" parent="YSort" instance=ExtResource( 14 )]
+[node name="arbre11" parent="elementsPantalla" instance=ExtResource( 14 )]
 position = Vector2( 807, 970 )
 
-[node name="arbre12" parent="YSort" instance=ExtResource( 14 )]
+[node name="arbre12" parent="elementsPantalla" instance=ExtResource( 14 )]
 position = Vector2( 1309, 907 )
 
-[node name="arbre13" parent="YSort" instance=ExtResource( 14 )]
+[node name="arbre13" parent="elementsPantalla" instance=ExtResource( 14 )]
 position = Vector2( 78, 1221 )
 
-[node name="arbre14" parent="YSort" instance=ExtResource( 14 )]
+[node name="arbre14" parent="elementsPantalla" instance=ExtResource( 14 )]
 position = Vector2( 708, 677 )
 
-[node name="arbre15" parent="YSort" instance=ExtResource( 14 )]
+[node name="arbre15" parent="elementsPantalla" instance=ExtResource( 14 )]
 position = Vector2( 681, 470 )
 
-[node name="arbre16" parent="YSort" instance=ExtResource( 14 )]
+[node name="arbre16" parent="elementsPantalla" instance=ExtResource( 14 )]
 position = Vector2( 428, 49 )
 
-[node name="arbre17" parent="YSort" instance=ExtResource( 14 )]
+[node name="arbre17" parent="elementsPantalla" instance=ExtResource( 14 )]
 position = Vector2( 1075, 246 )
 
-[node name="arbre18" parent="YSort" instance=ExtResource( 14 )]
+[node name="arbre18" parent="elementsPantalla" instance=ExtResource( 14 )]
 position = Vector2( 1031, -140 )
 
-[node name="arbre19" parent="YSort" instance=ExtResource( 14 )]
+[node name="arbre19" parent="elementsPantalla" instance=ExtResource( 14 )]
 position = Vector2( 635, -438 )
 
-[node name="arbre20" parent="YSort" instance=ExtResource( 14 )]
+[node name="arbre20" parent="elementsPantalla" instance=ExtResource( 14 )]
 position = Vector2( 543, -267 )
 
-[node name="arbre21" parent="YSort" instance=ExtResource( 14 )]
+[node name="arbre21" parent="elementsPantalla" instance=ExtResource( 14 )]
 position = Vector2( 13, -216 )
 
-[node name="arbre22" parent="YSort" instance=ExtResource( 14 )]
+[node name="arbre22" parent="elementsPantalla" instance=ExtResource( 14 )]
 position = Vector2( 157, -581 )
 
-[node name="arbre23" parent="YSort" instance=ExtResource( 14 )]
+[node name="arbre23" parent="elementsPantalla" instance=ExtResource( 14 )]
 position = Vector2( 1345, -164 )
 
-[node name="arbre24" parent="YSort" instance=ExtResource( 14 )]
+[node name="arbre24" parent="elementsPantalla" instance=ExtResource( 14 )]
 position = Vector2( 1410, 85 )
 
-[node name="arbre25" parent="YSort" instance=ExtResource( 14 )]
+[node name="arbre25" parent="elementsPantalla" instance=ExtResource( 14 )]
 position = Vector2( 1391, 544 )
 
-[node name="building60" parent="YSort" instance=ExtResource( 13 )]
+[node name="building60" parent="elementsPantalla" instance=ExtResource( 13 )]
 position = Vector2( 1327, 704 )
 
-[node name="arbre26" parent="YSort" instance=ExtResource( 14 )]
+[node name="arbre26" parent="elementsPantalla" instance=ExtResource( 14 )]
 position = Vector2( -335, 592 )
 
-[node name="arbre27" parent="YSort" instance=ExtResource( 14 )]
+[node name="arbre27" parent="elementsPantalla" instance=ExtResource( 14 )]
 position = Vector2( -509, -266 )
 
-[node name="arbre28" parent="YSort" instance=ExtResource( 14 )]
+[node name="arbre28" parent="elementsPantalla" instance=ExtResource( 14 )]
 position = Vector2( -118, 91 )
 
 [node name="objectes_spawn" type="Node2D" parent="."]

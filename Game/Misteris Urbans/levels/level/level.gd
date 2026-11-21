@@ -31,6 +31,8 @@ func assignar_testimonis_edificis():
 		var dades_testimoni: Dictionary = testimonis_json[i]
 		edifici.nomTestimoni = dades_testimoni.get("nom")
 		edifici.pista = dades_testimoni.get("pista").get("text")
+		edifici.missatge_sense_objecte = dades_testimoni.get("missatge_sense_objecte")
+		edifici.objecte = str(dades_testimoni.get("objecte_requerit_id"))
 
 func assignar_objectes_posicions():
 	var posicions: Array = get_tree().get_nodes_in_group("objecte_spawn")

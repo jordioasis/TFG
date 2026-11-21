@@ -8,6 +8,7 @@ const SUSPECTS_MATRIX_PATH: String = "res://data/sospitosos_matrix.json"
 var current_case_data: Dictionary = {}
 var suspects_matrix: Array = []
 var collected_clues: Array = []
+var collected_objects: Array = []
 var time_remaining: int = 0
 var is_game_active: bool = false
 var timer_node: Timer = null
@@ -17,6 +18,14 @@ func _ready() -> void:
 	load_suspects_matrix(SUSPECTS_MATRIX_PATH)
 
 
+func comprobar_objecte_disponible(objecte: String) -> bool:
+	for i in range(collected_objects.size()):
+		if objecte == collected_objects[i]:
+			return true
+		else:
+			return false
+	return false
+	
 func load_suspects_matrix(file_path: String) -> bool:
 	var file: File = File.new()
 	if not file.file_exists(file_path):

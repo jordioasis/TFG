@@ -4,6 +4,7 @@ extends StaticBody2D
 # Declare member variables here. Examples:
 var nomTestimoni = "Name"
 var pista = "Clue text"
+var missatge_sense_objecte = ""
 var objecte = "res"
 
 # Called when the node enters the scene tree for the first time.
@@ -20,7 +21,13 @@ func _on_AreaEntrada_body_entered(object):
 	if object.is_in_group("player"):
 		var parent = get_parent()
 		parent.get_parent().setWitnessName(nomTestimoni)
-		parent.get_parent().setClue(pista)
+		if(objecte != "Null"):
+			if CaseManager.comprobar_objecte_disponible(objecte):
+				parent.get_parent().setClue(pista)
+			else:
+				parent.get_parent().setClue(str(missatge_sense_objecte))
+		else:
+			parent.get_parent().setClue(pista)
 		parent.get_parent().muestraTexto()
 
 
