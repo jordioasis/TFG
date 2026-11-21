@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Climbs.png-de5cd8ab6807bd26f3a1477275b0a71f.stex"
+path="res://.import/BuildingSpecial2.png-4fcd738a5932194e0b54e4c408c2cf28.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://entities/grounds/Climbs.png"
-dest_files=[ "res://.import/Climbs.png-de5cd8ab6807bd26f3a1477275b0a71f.stex" ]
+source_file="res://entities/Edificis/BuildingSpecial2.png"
+dest_files=[ "res://.import/BuildingSpecial2.png-4fcd738a5932194e0b54e4c408c2cf28.stex" ]
 
 [params]
 

@@ -14,6 +14,10 @@ config/name="Misteris Urbans"
 run/main_scene="res://levels/menu/menu.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+CaseManager="*res://levels/CaseManager.gd"
+
 [display]
 
 window/size/width=640

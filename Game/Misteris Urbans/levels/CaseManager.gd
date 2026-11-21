@@ -1,0 +1,90 @@
+extends Node
+
+signal case_loaded(case_data)
+signal time_updated(seconds_remaining)
+
+const SUSPECTS_MATRIX_PATH: String = "res://data/sospitosos_matrix.json"
+
+var current_case_data: Dictionary = {}
+var suspects_matrix: Array = []
+var collected_clues: Array = []
+var time_remaining: int = 0
+var is_game_active: bool = false
+var timer_node: Timer = null
+
+
+func _ready() -> void:	
+	load_suspects_matrix(SUSPECTS_MATRIX_PATH)
+
+
+func load_suspects_matrix(file_path: String) -> bool:
+	var file: File = File.new()
+	if not file.file_exists(file_path):
+		printerr("CaseManager: La matriu de sospitosos no es trova a: ", file_path)
+		return false
+	
+	if file.open(file_path, File.READ) != OK:
+		printerr("CaseManager: Error en obrir la matriu de sospitosos.")
+		return false
+	
+	var json_text: String = file.get_as_text()
+	file.close()
+	
+	var parse_res: JSONParseResult = JSON.parse(json_text)
+	if parse_res.error == OK and parse_res.result is Dictionary:
+		suspects_matrix = parse_res.result.get("sospitosos", [])
+		print("CaseManager: Matriu de ", suspects_matrix.size(), " sospitosos carregada.")
+		return true
+	
+	printerr("CaseManager: Error parsejant la matriu de sospitosos.")
+	return false
+
+
+func load_case_from_json_string(json_string: String) -> bool:
+	var parse_result: JSONParseResult = JSON.parse(json_string)
+	
+	if parse_result.error != OK:
+		printerr("CaseManager: Error parsejant JSON a la línia ", parse_result.error_line, ": ", parse_result.error_string)
+		return false
+	
+	if not (parse_result.result is Dictionary):
+		printerr("CaseManager: El JSON rebut no és un Diccionari vàlid.")
+		return false
+
+	current_case_data = parse_result.result
+	collected_clues.clear()
+	
+	# Extraer metadatos y tiempo límite (por defecto 300s = 5 min)
+	var metadatos: Dictionary = current_case_data.get("metadatos", {})
+	time_remaining = metadatos.get("temps_limit_segons", 300)
+	
+	is_game_active = true
+	
+	emit_signal("case_loaded", current_case_data)
+	emit_signal("time_updated", time_remaining)
+	
+	var titulo_mision = current_case_data.get("missio", {}).get("titol", "Missió sense titol")
+	print("CaseManager: Cas '", titulo_mision, "' carregat amb exit.")
+	return true
+
+
+# Carga una misión desde un archivo .json local (p. ej., res://data/misiones/mision_01.json)
+func load_case_from_file(file_path: String) -> bool:
+	var file: File = File.new()
+	if not file.file_exists(file_path):
+		printerr("CaseManager: EL'arxiu de missió no existeix: ", file_path)
+		return false
+	
+	if file.open(file_path, File.READ) != OK:
+		printerr("CaseManager: No s'ha pogut obrir el fitxer de missió: ", file_path)
+		return false
+	
+	var json_text: String = file.get_as_text()
+	file.close()
+	
+	return load_case_from_json_string(json_text)
+
+
+# Devuelve la lista completa de sospechosos cargados
+func get_all_suspects() -> Array:
+	return suspects_matrix

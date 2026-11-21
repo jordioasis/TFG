@@ -2,9 +2,9 @@ extends StaticBody2D
 
 
 # Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
+var nomTestimoni = "Name"
+var pista = "Clue text"
+var objecte = "res"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -17,10 +17,11 @@ func _ready():
 
 
 func _on_AreaEntrada_body_entered(object):
-	print("entra area")
 	if object.is_in_group("player"):
 		var parent = get_parent()
-		parent.get_parent().muestraTexto() # Replace with function body.
+		parent.get_parent().setWitnessName(nomTestimoni)
+		parent.get_parent().setClue(pista)
+		parent.get_parent().muestraTexto()
 
 
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/BuildingSpecial2.png-f3db0b071653c40086e4d491b0532ad4.stex"
+path="res://.import/SideRoads.png-423bf79c05b6b099aae15a860e1043bc.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://entities/Buildings/BuildingSpecial2.png"
-dest_files=[ "res://.import/BuildingSpecial2.png-f3db0b071653c40086e4d491b0532ad4.stex" ]
+source_file="res://entities/Terres/SideRoads.png"
+dest_files=[ "res://.import/SideRoads.png-423bf79c05b6b099aae15a860e1043bc.stex" ]
 
 [params]
 

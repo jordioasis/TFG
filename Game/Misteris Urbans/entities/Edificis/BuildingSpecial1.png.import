@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Building1.png-55bdd6492779ac0f4ca0bd740f1e7c7a.stex"
+path="res://.import/BuildingSpecial1.png-670c5149baaceae46766a591cf07faa6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://entities/Buildings/Building1.png"
-dest_files=[ "res://.import/Building1.png-55bdd6492779ac0f4ca0bd740f1e7c7a.stex" ]
+source_file="res://entities/Edificis/BuildingSpecial1.png"
+dest_files=[ "res://.import/BuildingSpecial1.png-670c5149baaceae46766a591cf07faa6.stex" ]
 
 [params]
 

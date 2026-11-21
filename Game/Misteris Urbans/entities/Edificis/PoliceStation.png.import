@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Tree1.png-46bdddb1c881d4256ab6940c88b50c36.stex"
+path="res://.import/PoliceStation.png-dbf699f7e2c79048a264c649812c43be.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://entities/Buildings/Tree1.png"
-dest_files=[ "res://.import/Tree1.png-46bdddb1c881d4256ab6940c88b50c36.stex" ]
+source_file="res://entities/Edificis/PoliceStation.png"
+dest_files=[ "res://.import/PoliceStation.png-dbf699f7e2c79048a264c649812c43be.stex" ]
 
 [params]
 

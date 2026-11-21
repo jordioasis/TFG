@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/SideRoads.png-f0e9b0f99752e61b3e84eb448b73b8cc.stex"
+path="res://.import/Tree1.png-c4e10650abc6cddd1d59465fdb761777.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://entities/grounds/SideRoads.png"
-dest_files=[ "res://.import/SideRoads.png-f0e9b0f99752e61b3e84eb448b73b8cc.stex" ]
+source_file="res://entities/Edificis/Tree1.png"
+dest_files=[ "res://.import/Tree1.png-c4e10650abc6cddd1d59465fdb761777.stex" ]
 
 [params]
 
