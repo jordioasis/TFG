@@ -6,7 +6,7 @@
   },
   "resolucio": {
     "culpable_id": "SOSP-03",
-    "lloc_ocultacio": "Nort",
+    "lloc_ocultacio": "Nord",
 	"explicacio": "Marc Soler (El Camalió) s'oculta al sector Nort. El testimoni 3 mentia (afirmaba que NO portava ulleres), com va revelar el testimoni 8."
   },
   "objectes_mapa": [
@@ -42,7 +42,7 @@
     },
     {
       "id": "TEST-02",
-      "nom": "Marta (Guardia de Seguridad)",
+      "nom": "Marta (Guardia de Seguretat)",
       "posicio_spawn_id": 2,
       "tipus_testimoni": "pista_caracteristica",
       "objecte_requerit_id": "OBJ-01",
@@ -68,7 +68,7 @@
     },
     {
       "id": "TEST-04",
-      "nom": "Laura (Barrendera)",
+      "nom": "Laura (Escombraire)",
       "posicio_spawn_id": 4,
       "tipus_testimoni": "pista_caracteristica",
       "objecte_requerit_id": "OBJ-02",
@@ -92,7 +92,7 @@
     },
     {
       "id": "TEST-06",
-      "nom": "Vendedor del Diari",
+      "nom": "Venedor de Diari",
       "posicio_spawn_id": 6,
       "tipus_testimoni": "sense_valor",
       "objecte_requerit_id": null,
