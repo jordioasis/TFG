@@ -22,8 +22,6 @@ func comprobar_objecte_disponible(objecte: String) -> bool:
 	for i in range(collected_objects.size()):
 		if objecte == collected_objects[i]:
 			return true
-		else:
-			return false
 	return false
 	
 func load_suspects_matrix(file_path: String) -> bool:
