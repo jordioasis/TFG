@@ -2,6 +2,7 @@ extends Node
 
 signal case_loaded(case_data)
 signal time_updated(seconds_remaining)
+signal time_expired
 
 const SUSPECTS_MATRIX_PATH: String = "res://data/sospitosos_matrix.json"
 
@@ -14,10 +15,48 @@ var is_game_active: bool = false
 var timer_node: Timer = null
 
 
+
+	
 func _ready() -> void:	
 	load_suspects_matrix(SUSPECTS_MATRIX_PATH)
+	timer_node = Timer.new()
+	timer_node.wait_time = 1.0 # S'executa cada 1 segon
+	timer_node.one_shot = false
+	timer_node.connect("timeout", self, "_on_Timer_timeout")
+	add_child(timer_node) 
 
 
+func _on_Timer_timeout() -> void:
+	if not is_game_active:
+		return
+		
+	if time_remaining > 0:
+		time_remaining -= 1
+		if time_remaining <= 0:
+			time_remaining = 0
+			is_game_active = false
+			timer_node.stop()
+			emit_signal("time_expired")
+			
+			
+func iniciar_temps(segons: float) -> void:
+	time_remaining = segons
+	is_game_active = true
+	timer_node.start()
+
+func pausar_temps() -> void:
+	is_game_active = false
+
+func reanudar_temps() -> void:
+	if time_remaining > 0.0:
+		is_game_active = true
+
+func obtir_temps() -> String:
+	var total_segons: int = int(ceil(time_remaining))
+	var minuts: int = total_segons / 60
+	var segons: int = total_segons % 60
+	return "%02d:%02d" % [minuts, segons]
+	
 func comprobar_objecte_disponible(objecte: String) -> bool:
 	for i in range(collected_objects.size()):
 		if objecte == collected_objects[i]:

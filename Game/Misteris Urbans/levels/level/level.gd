@@ -12,12 +12,28 @@ var ulleres_instance = ulleres_scene.instance()
 var decodificador_scene = preload("res://entities/objectes/decodificador.tscn")
 var decodificador_instance = decodificador_scene.instance()
 
-onready var mi_label = $CanvasLayer/Label
+onready var mi_label = $CanvasSuperior/BarraSuperior/Marge/ContenedorHoritzontal/LabelTemps
+
+onready var esperant_inici = true
 
 func _ready():
 	add_child(hud_instance)
 	assignar_testimonis_edificis()
 	assignar_objectes_posicions()
+	hud_instance.add_title(CaseManager.current_case_data.get("missio", {}).get("titol", "Missió sense titol"))
+	hud_instance.add_text(CaseManager.current_case_data.get("missio", {}).get("descripcio", "Missió sense descripcio"))
+	hud_instance.show_textbox()
+
+
+func iniciar_partida():
+	hud_instance.hide_textbox()
+	CaseManager.iniciar_temps(180)
+
+func _process(_delta: float) -> void:
+	if esperant_inici and Input.is_action_just_pressed("ui_accept"):
+		esperant_inici = false
+		iniciar_partida()
+	mi_label.text = CaseManager.obtir_temps()
 
 func assignar_testimonis_edificis():
 	var edificis: Array = get_tree().get_nodes_in_group("testimoni")
