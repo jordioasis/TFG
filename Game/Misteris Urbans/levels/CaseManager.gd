@@ -40,7 +40,7 @@ func _on_Timer_timeout() -> void:
 			
 			
 func iniciar_temps(segons: float) -> void:
-	time_remaining = segons
+	time_remaining = int(segons)
 	is_game_active = true
 	timer_node.start()
 
