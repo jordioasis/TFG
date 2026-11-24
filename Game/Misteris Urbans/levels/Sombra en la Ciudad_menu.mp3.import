@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Sombra en la Ciudad_menu.mp3-5516b3f62a2d4bf867e2ae3595af96d5.mp3str"
+
+[deps]
+
+source_file="res://levels/Sombra en la Ciudad_menu.mp3"
+dest_files=[ "res://.import/Sombra en la Ciudad_menu.mp3-5516b3f62a2d4bf867e2ae3595af96d5.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

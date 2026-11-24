@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://levels/menu/portada.png" type="Texture" id=1]
 [ext_resource path="res://levels/menu/menu.gd" type="Script" id=2]
+[ext_resource path="res://levels/Sombra en la Ciudad_menu.mp3" type="AudioStream" id=3]
 
 [node name="Control" type="CanvasLayer"]
 script = ExtResource( 2 )
@@ -42,6 +43,10 @@ margin_bottom = 68.0
 text = "SORTIR"
 
 [node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+autoplay = true
 
 [connection signal="pressed" from="VBoxContainer/btnJugar" to="." method="_on_btnJugar_pressed"]
 [connection signal="pressed" from="VBoxContainer/btnAleatoria" to="." method="_on_btnAleatoria_pressed"]
