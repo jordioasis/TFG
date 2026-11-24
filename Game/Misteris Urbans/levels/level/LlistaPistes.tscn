@@ -14,11 +14,12 @@ texture = ExtResource( 2 )
 expand = true
 
 [node name="TextureRect2" type="TextureRect" parent="."]
-margin_right = 643.0
-margin_bottom = 358.0
+margin_left = -10.0
+margin_top = -36.0
+margin_right = 683.0
+margin_bottom = 395.0
 texture = ExtResource( 3 )
 expand = true
-stretch_mode = 6
 
 [node name="ContainerPistes" type="VBoxContainer" parent="."]
 anchor_left = 0.5
@@ -30,5 +31,5 @@ script = ExtResource( 1 )
 
 [node name="Control" type="Control" parent="ContainerPistes"]
 margin_right = 337.0
-margin_bottom = 75.0
-rect_min_size = Vector2( 0, 75 )
+margin_bottom = 50.0
+rect_min_size = Vector2( 0, 50 )
