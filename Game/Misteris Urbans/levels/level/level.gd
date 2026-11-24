@@ -12,7 +12,8 @@ var ulleres_instance = ulleres_scene.instance()
 var decodificador_scene = preload("res://entities/objectes/decodificador.tscn")
 var decodificador_instance = decodificador_scene.instance()
 
-var llibretaPistes = preload ("res://levels/level/LlistaPistes.tscn")
+onready var llibretaPistes = preload ("res://levels/level/LlistaPistes.tscn")
+onready var sospitosos = preload ("res://levels/level/PantallaSospitosos.tscn")
 
 onready var mi_label = $CanvasSuperior/BarraSuperior/Marge/ContenedorHoritzontal/LabelTemps
 
@@ -37,9 +38,35 @@ func _process(_delta: float) -> void:
 		iniciar_partida()
 	mi_label.text = CaseManager.obtir_temps()
 	if !esperant_inici and Input.is_action_just_pressed("obrir_llibreta"):
-		CaseManager.pausar_temps()
-		get_tree().change_scene("res://levels/level/LlistaPistes.tscn")
-		
+		obrir_llibreta()
+	if !esperant_inici and Input.is_action_just_pressed("sospitosos"):
+		obrir_sospitosos()
+
+func obrir_llibreta():
+	CaseManager.pausar_temps()
+	var llibreta = llibretaPistes.instance()
+
+	var capa_ui = CanvasLayer.new()
+	capa_ui.name = "CapaLlibreta"
+	capa_ui.layer = 10 # Assegurem que quedi a sobre de tot
+	get_tree().current_scene.add_child(capa_ui)
+	capa_ui.add_child(llibreta)
+	
+	get_tree().paused = true
+
+func obrir_sospitosos():
+	CaseManager.pausar_temps()
+	var sospitosos_ui = sospitosos.instance()
+
+	var capa_ui = CanvasLayer.new()
+	capa_ui.name = "CapaSospitosos"
+	capa_ui.layer = 10 # Assegurem que quedi a sobre de tot
+	get_tree().current_scene.add_child(capa_ui)
+	capa_ui.add_child(sospitosos_ui)
+	
+	get_tree().paused = true
+
+
 func assignar_testimonis_edificis():
 	var edificis: Array = get_tree().get_nodes_in_group("testimoni")
 	var testimonis_json: Array = CaseManager.current_case_data.get("testimonis", []).duplicate()

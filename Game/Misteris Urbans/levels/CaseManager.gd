@@ -13,11 +13,10 @@ var collected_objects: Array = []
 var time_remaining: int = 0
 var is_game_active: bool = false
 var timer_node: Timer = null
-
-
+var posicio_player = null
 
 	
-func _ready() -> void:	
+func _ready() -> void:			
 	load_suspects_matrix(SUSPECTS_MATRIX_PATH)
 	timer_node = Timer.new()
 	timer_node.wait_time = 1.0 # S'executa cada 1 segon

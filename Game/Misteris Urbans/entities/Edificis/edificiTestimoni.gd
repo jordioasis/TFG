@@ -24,12 +24,18 @@ func _on_AreaEntrada_body_entered(object):
 		if(objecte != "Null"):
 			if CaseManager.comprobar_objecte_disponible(objecte):
 				parent.get_parent().setClue(pista)
-				CaseManager.collected_clues.append(pista)
+				if not CaseManager.collected_clues.has(pista):
+					CaseManager.collected_clues.append(pista)
+				else:
+					print("Aquesta pista ja la tens!")
 			else:
 				parent.get_parent().setClue(str(missatge_sense_objecte))
 		else:
 			parent.get_parent().setClue(pista)
-			CaseManager.collected_clues.append(pista)
+			if not CaseManager.collected_clues.has(pista):
+				CaseManager.collected_clues.append(pista)
+			else:
+				print("Aquesta pista ja la tens!")
 		parent.get_parent().muestraTexto()
 
 

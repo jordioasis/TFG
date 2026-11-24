@@ -1,0 +1,314 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://levels/level/Sospitosos/SOSP-03.png" type="Texture" id=1]
+[ext_resource path="res://levels/menu/portada.png" type="Texture" id=2]
+[ext_resource path="res://levels/level/Sospitosos/SOSP-04.png" type="Texture" id=3]
+[ext_resource path="res://levels/level/Sospitosos/SOSP-01.png" type="Texture" id=4]
+[ext_resource path="res://levels/level/Sospitosos/SOSP-02.png" type="Texture" id=5]
+[ext_resource path="res://levels/level/Sospitosos/SOSP-09.png" type="Texture" id=6]
+[ext_resource path="res://levels/level/Sospitosos/SOSP-10.png" type="Texture" id=7]
+[ext_resource path="res://levels/level/Sospitosos/SOSP-12.png" type="Texture" id=8]
+[ext_resource path="res://levels/level/Sospitosos/SOSP-05.png" type="Texture" id=9]
+[ext_resource path="res://levels/level/Sospitosos/SOSP-11.png" type="Texture" id=10]
+[ext_resource path="res://levels/level/Sospitosos/SOSP-07.png" type="Texture" id=11]
+[ext_resource path="res://levels/level/Sospitosos/SOSP-08.png" type="Texture" id=12]
+[ext_resource path="res://levels/level/Sospitosos/SOSP-06.png" type="Texture" id=13]
+[ext_resource path="res://levels/level/PantallaSospitosos.gd" type="Script" id=14]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+pause_mode = 2
+script = ExtResource( 14 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 640.0
+margin_bottom = 369.0
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect2" type="ColorRect" parent="."]
+margin_left = 19.0
+margin_top = 16.0
+margin_right = 617.0
+margin_bottom = 341.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="Containersospitosos" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -255.0
+margin_right = 248.0
+margin_bottom = 88.0
+
+[node name="Control" type="Control" parent="Containersospitosos"]
+margin_right = 503.0
+margin_bottom = 25.0
+rect_min_size = Vector2( 0, 25 )
+
+[node name="SospitososFila1" type="HBoxContainer" parent="Containersospitosos"]
+margin_top = 29.0
+margin_right = 503.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 0, 64 )
+alignment = 1
+
+[node name="Fitxa" type="VBoxContainer" parent="Containersospitosos/SospitososFila1"]
+margin_left = 98.0
+margin_right = 168.0
+margin_bottom = 99.0
+rect_min_size = Vector2( 70, 0 )
+
+[node name="TextureRect" type="TextureRect" parent="Containersospitosos/SospitososFila1/Fitxa"]
+margin_right = 70.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+texture = ExtResource( 4 )
+expand = true
+
+[node name="Label" type="Label" parent="Containersospitosos/SospitososFila1/Fitxa"]
+margin_top = 68.0
+margin_right = 70.0
+margin_bottom = 99.0
+text = "Pau Bosc
+\"El Cap\""
+align = 1
+
+[node name="Fitxa2" type="VBoxContainer" parent="Containersospitosos/SospitososFila1"]
+margin_left = 172.0
+margin_right = 242.0
+margin_bottom = 99.0
+rect_min_size = Vector2( 70, 0 )
+
+[node name="TextureRect" type="TextureRect" parent="Containersospitosos/SospitososFila1/Fitxa2"]
+margin_right = 70.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+texture = ExtResource( 5 )
+expand = true
+
+[node name="Label" type="Label" parent="Containersospitosos/SospitososFila1/Fitxa2"]
+margin_top = 68.0
+margin_right = 70.0
+margin_bottom = 99.0
+text = "Laura Valls
+\"L'Ombra\""
+align = 1
+
+[node name="Fitxa3" type="VBoxContainer" parent="Containersospitosos/SospitososFila1"]
+margin_left = 246.0
+margin_right = 324.0
+margin_bottom = 99.0
+rect_min_size = Vector2( 70, 0 )
+
+[node name="TextureRect" type="TextureRect" parent="Containersospitosos/SospitososFila1/Fitxa3"]
+margin_right = 78.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+texture = ExtResource( 1 )
+expand = true
+
+[node name="Label" type="Label" parent="Containersospitosos/SospitososFila1/Fitxa3"]
+margin_top = 68.0
+margin_right = 78.0
+margin_bottom = 99.0
+text = "Marc Soler
+\"El Camalió\""
+align = 1
+
+[node name="Fitxa4" type="VBoxContainer" parent="Containersospitosos/SospitososFila1"]
+margin_left = 328.0
+margin_right = 404.0
+margin_bottom = 99.0
+rect_min_size = Vector2( 70, 0 )
+
+[node name="TextureRect" type="TextureRect" parent="Containersospitosos/SospitososFila1/Fitxa4"]
+margin_right = 76.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+texture = ExtResource( 3 )
+expand = true
+
+[node name="Label" type="Label" parent="Containersospitosos/SospitososFila1/Fitxa4"]
+margin_top = 68.0
+margin_right = 76.0
+margin_bottom = 99.0
+text = "Clara Pons
+\"La Guineu\""
+align = 1
+
+[node name="SospitososFila2" type="HBoxContainer" parent="Containersospitosos"]
+margin_top = 132.0
+margin_right = 503.0
+margin_bottom = 231.0
+rect_min_size = Vector2( 0, 64 )
+alignment = 1
+
+[node name="Fitxa" type="VBoxContainer" parent="Containersospitosos/SospitososFila2"]
+margin_left = 83.0
+margin_right = 169.0
+margin_bottom = 99.0
+
+[node name="TextureRect" type="TextureRect" parent="Containersospitosos/SospitososFila2/Fitxa"]
+margin_right = 86.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+texture = ExtResource( 9 )
+expand = true
+
+[node name="Label" type="Label" parent="Containersospitosos/SospitososFila2/Fitxa"]
+margin_top = 68.0
+margin_right = 86.0
+margin_bottom = 99.0
+text = "Eudald Puig
+\"El Tenebrós\""
+align = 1
+
+[node name="Fitxa2" type="VBoxContainer" parent="Containersospitosos/SospitososFila2"]
+margin_left = 173.0
+margin_right = 258.0
+margin_bottom = 99.0
+
+[node name="TextureRect" type="TextureRect" parent="Containersospitosos/SospitososFila2/Fitxa2"]
+margin_right = 85.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+texture = ExtResource( 13 )
+expand = true
+
+[node name="Label" type="Label" parent="Containersospitosos/SospitososFila2/Fitxa2"]
+margin_top = 68.0
+margin_right = 85.0
+margin_bottom = 99.0
+text = "Mireia Roca
+\"La Bicicleta\""
+align = 1
+
+[node name="Fitxa3" type="VBoxContainer" parent="Containersospitosos/SospitososFila2"]
+margin_left = 262.0
+margin_right = 351.0
+margin_bottom = 99.0
+
+[node name="TextureRect" type="TextureRect" parent="Containersospitosos/SospitososFila2/Fitxa3"]
+margin_right = 89.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+texture = ExtResource( 11 )
+expand = true
+
+[node name="Label" type="Label" parent="Containersospitosos/SospitososFila2/Fitxa3"]
+margin_top = 68.0
+margin_right = 89.0
+margin_bottom = 99.0
+text = "Anna Noguera
+\"La Vidua\""
+align = 1
+
+[node name="Fitxa4" type="VBoxContainer" parent="Containersospitosos/SospitososFila2"]
+margin_left = 355.0
+margin_right = 420.0
+margin_bottom = 99.0
+
+[node name="TextureRect" type="TextureRect" parent="Containersospitosos/SospitososFila2/Fitxa4"]
+margin_right = 65.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+texture = ExtResource( 12 )
+expand = true
+
+[node name="Label" type="Label" parent="Containersospitosos/SospitososFila2/Fitxa4"]
+margin_top = 68.0
+margin_right = 65.0
+margin_bottom = 99.0
+text = "Sergi Grau
+\"El Zorro\""
+align = 1
+
+[node name="SospitososFila3" type="HBoxContainer" parent="Containersospitosos"]
+margin_top = 235.0
+margin_right = 503.0
+margin_bottom = 334.0
+rect_min_size = Vector2( 0, 64 )
+alignment = 1
+
+[node name="Fitxa" type="VBoxContainer" parent="Containersospitosos/SospitososFila3"]
+margin_left = 102.0
+margin_right = 172.0
+margin_bottom = 99.0
+rect_min_size = Vector2( 70, 0 )
+
+[node name="TextureRect" type="TextureRect" parent="Containersospitosos/SospitososFila3/Fitxa"]
+margin_right = 70.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+texture = ExtResource( 6 )
+expand = true
+
+[node name="Label" type="Label" parent="Containersospitosos/SospitososFila3/Fitxa"]
+margin_top = 68.0
+margin_right = 70.0
+margin_bottom = 99.0
+text = "Sònia Mas
+\"La Daga\""
+align = 1
+
+[node name="Fitxa2" type="VBoxContainer" parent="Containersospitosos/SospitososFila3"]
+margin_left = 176.0
+margin_right = 246.0
+margin_bottom = 99.0
+rect_min_size = Vector2( 70, 69.94 )
+
+[node name="TextureRect" type="TextureRect" parent="Containersospitosos/SospitososFila3/Fitxa2"]
+margin_right = 70.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 70, 64 )
+texture = ExtResource( 7 )
+expand = true
+
+[node name="Label" type="Label" parent="Containersospitosos/SospitososFila3/Fitxa2"]
+margin_top = 68.0
+margin_right = 70.0
+margin_bottom = 99.0
+text = "Jordi Font
+\"El Llest\""
+align = 1
+
+[node name="Fitxa3" type="VBoxContainer" parent="Containersospitosos/SospitososFila3"]
+margin_left = 250.0
+margin_right = 326.0
+margin_bottom = 99.0
+rect_min_size = Vector2( 70, 0 )
+
+[node name="TextureRect" type="TextureRect" parent="Containersospitosos/SospitososFila3/Fitxa3"]
+margin_right = 76.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+texture = ExtResource( 10 )
+expand = true
+
+[node name="Label" type="Label" parent="Containersospitosos/SospitososFila3/Fitxa3"]
+margin_top = 68.0
+margin_right = 76.0
+margin_bottom = 99.0
+text = "Xavi Torrent
+\"El Talp\""
+align = 1
+
+[node name="Fitxa4" type="VBoxContainer" parent="Containersospitosos/SospitososFila3"]
+margin_left = 330.0
+margin_right = 400.0
+margin_bottom = 99.0
+rect_min_size = Vector2( 70, 0 )
+
+[node name="TextureRect" type="TextureRect" parent="Containersospitosos/SospitososFila3/Fitxa4"]
+margin_right = 70.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+texture = ExtResource( 8 )
+expand = true
+
+[node name="Label" type="Label" parent="Containersospitosos/SospitososFila3/Fitxa4"]
+margin_top = 68.0
+margin_right = 70.0
+margin_bottom = 99.0
+text = "Elena Boix
+\"La Flama\""
+align = 1
