@@ -41,6 +41,9 @@ margin_right = 145.0
 margin_bottom = 68.0
 text = "SORTIR"
 
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
 [connection signal="pressed" from="VBoxContainer/btnJugar" to="." method="_on_btnJugar_pressed"]
 [connection signal="pressed" from="VBoxContainer/btnAleatoria" to="." method="_on_btnAleatoria_pressed"]
 [connection signal="pressed" from="VBoxContainer/btnSortir" to="." method="_on_btnSortir_pressed"]
+[connection signal="request_completed" from="HTTPRequest" to="." method="_on_HTTPRequest_request_completed"]

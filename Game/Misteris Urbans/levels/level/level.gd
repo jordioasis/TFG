@@ -67,6 +67,15 @@ func obrir_sospitosos():
 	get_tree().paused = true
 
 
+func _unhandled_input(event):
+	if event.is_action_pressed("ui_cancel"): # "ui_cancel" viene asignado a ESC por defecto en Godot
+		tornar_al_menu()
+
+func tornar_al_menu():
+	get_tree().paused = false
+	CaseManager.is_game_active = false
+	get_tree().change_scene("res://levels/menu/menu.tscn")
+
 func assignar_testimonis_edificis():
 	var edificis: Array = get_tree().get_nodes_in_group("testimoni")
 	var testimonis_json: Array = CaseManager.current_case_data.get("testimonis", []).duplicate()
