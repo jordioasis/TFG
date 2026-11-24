@@ -913,5 +913,4 @@ stretch_mode = 6
 [node name="bgrndmusic" type="AudioStreamPlayer" parent="."]
 pause_mode = 2
 stream = ExtResource( 4 )
-volume_db = -6.19
 autoplay = true
