@@ -1,0 +1,129 @@
+{
+  "missio": {
+    "id": "MIS-001",
+    "titol": "El Robatori de la Joia del Museu",
+    "descripcio": "El Diamant Nocturn ha desaparegut. Trova els objectes clau al mapa, interroga als 8 testimonis i descubreix qui ha sigut el culpable i a quin sector de la ciutat s'oculta."
+  },
+  "resolucio": {
+    "culpable_id": "SOSP-03",
+    "lloc_ocultacio": "Nord",
+	"explicacio": "Marc Soler (El Camalió) s'oculta al sector Nort. El testimoni 3 mentia (afirmaba que NO portava ulleres), com va revelar el testimoni 8."
+  },
+  "objectes_mapa": [
+    {
+      "id": "OBJ-01",
+      "nom": "Ulleres UV",
+      "descripcio": "Permeten llegir missatges escrits amb tinta invisible."
+    },
+    {
+      "id": "OBJ-02",
+      "nom": "Lupa de Detectiu",
+      "descripcio": "Permet examinar empremtes dactilars y detalls fins."
+    },
+    {
+      "id": "OBJ-03",
+      "nom": "Decodificador",
+      "descripcio": "Traductor de claus y notas encriptades."
+    }
+  ],
+  "testimonis": [
+    {
+      "id": "TEST-01",
+      "nom": "Sr. Joan (Conserje)",
+      "posicio_spawn_id": 1,
+      "tipus_testimoni": "pista_caracteristica",
+      "objecte_requerit_id": null,
+      "missatge_sense_objecte": null,
+      "pista": {
+        "caracteristica": "barret",
+        "valor_afirmat": false,
+        "text": "Vaig veure fugir al sospitós. Puc jurar que NO portava barret!"
+      }
+    },
+    {
+      "id": "TEST-02",
+      "nom": "Marta (Guardia de Seguretat)",
+      "posicio_spawn_id": 2,
+      "tipus_testimoni": "pista_caracteristica",
+      "objecte_requerit_id": "OBJ-01",
+      "missatge_sense_objecte": "Marta senyala una nota a la pared escrita amb tinta invisible. Necessites les 'Ulleres UV' per llegir-la.",
+      "pista": {
+        "caracteristica": "bigotis",
+        "valor_afirmat": true,
+        "text": "La nota invisible revela: 'El culpable portava un gran bigotis'."
+      }
+    },
+    {
+      "id": "TEST-03",
+      "nom": "Sr. Ricard (Informador)",
+      "posicio_spawn_id": 3,
+      "tipus_testimoni": "pista_caracteristica",
+      "objecte_requerit_id": null,
+      "missatge_sense_objecte": null,
+      "pista": {
+        "caracteristica": "ulleres",
+        "valor_afirmat": false,
+        "text": "T'aseguro que el tipus que vaig veure còrrer NO portava ulleres."
+      }
+    },
+    {
+      "id": "TEST-04",
+      "nom": "Laura (Escombraire)",
+      "posicio_spawn_id": 4,
+      "tipus_testimoni": "pista_caracteristica",
+      "objecte_requerit_id": "OBJ-02",
+      "missatge_sense_objecte": "Hi ha una pista a la brosa. Necesites la 'Lupa de Detectiu' per poder examinar-la.",
+      "pista": {
+        "caracteristica": "cicatriu",
+        "valor_afirmat": false,
+		"text": "Al examinar la tela trencada: El sospitos NO tenía cap cicatriu visible."
+      }
+    },
+    {
+      "id": "TEST-05",
+      "nom": "Taxista Nocturn",
+      "posicio_spawn_id": 5,
+      "tipus_testimoni": "sense_valor",
+      "objecte_requerit_id": null,
+      "missatge_sense_objecte": null,
+      "pista": {
+		"text": "Porto tota la nit cunduint i no he vist res fora del normal. La ciutat està tranquila."
+      }
+    },
+    {
+      "id": "TEST-06",
+      "nom": "Venedor de Diari",
+      "posicio_spawn_id": 6,
+      "tipus_testimoni": "sense_valor",
+      "objecte_requerit_id": null,
+      "missatge_sense_objecte": null,
+      "pista": {
+        "text": "Compri el diari! Múltiples robatoris al centre de la ciutat aquesta setmana."
+      }
+    },
+    {
+      "id": "TEST-07",
+      "nom": "El Confident Urbà",
+      "posicio_spawn_id": 7,
+      "tipus_testimoni": "pista_ubicacio",
+      "objecte_requerit_id": "OBJ-03",
+      "missatge_sense_objecte": "El confident et dona una nota xifrada. Necesites el 'Decodificador' per poder entendre on s'oculta.",
+      "pista": {
+        "lugar": "Norte",
+        "text": "Traduint la nota: 'El sospitos s'amaga als antics magatzems del sector Nord'."
+      }
+    },
+    {
+      "id": "TEST-08",
+      "nom": "El Xamán de la Ciutat",
+      "posicio_spawn_id": 8,
+      "tipus_testimoni": "pista_refutacio",
+      "objecte_requerit_id": null,
+      "missatge_sense_objecte": null,
+      "pista": {
+        "testigo_refutado_id": "TEST-03",
+        "text": "Atenció, detectiu! Les paraules del'informador Ricard (Testimoni 3) són falses; va dir el contrari de la veritat."
+      }
+    }
+  ]
+}

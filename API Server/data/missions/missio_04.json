@@ -1,0 +1,129 @@
+{
+  "missio": {
+    "id": "MIS-004",
+    "titol": "El Robatori del Manuscrit Antic",
+    "descripcio": "Un còdex medieval de valor incalculable ha desaparegut de la Biblioteca Històrica. Troba els objectes, interroga als 8 testimonis i atrapa al lladre."
+  },
+  "resolucio": {
+    "culpable_id": "SOSP-09",
+    "lloc_ocultacio": "Oest",
+    "explicacio": "Sònia Mas (La Daga) s'oculta al sector Oest. El testimoni 1 mentia (afirmava que NO portava barret), tal com ha demostrat el testimoni 8."
+  },
+  "objectes_mapa": [
+    {
+      "id": "OBJ-01",
+      "nom": "Ulleres UV",
+      "descripcio": "Permeten llegir missatges escrits amb tinta invisible."
+    },
+    {
+      "id": "OBJ-02",
+      "nom": "Lupa de Detectiu",
+      "descripcio": "Permet examinar empremtes dactilars i detalls fins."
+    },
+    {
+      "id": "OBJ-03",
+      "nom": "Decodificador",
+      "descripcio": "Traductor de claus i notes encriptades."
+    }
+  ],
+  "testimonis": [
+    {
+      "id": "TEST-01",
+      "nom": "Sr. Esteve (Bibliotecari)",
+      "posicio_spawn_id": 1,
+      "tipus_testimoni": "pista_caracteristica",
+      "objecte_requerit_id": null,
+      "missatge_sense_objecte": null,
+      "pista": {
+        "caracteristica": "barret",
+        "valor_afirmat": false,
+        "text": "Estic completament segur que la persona que va entrar a la sala NO portava barret."
+      }
+    },
+    {
+      "id": "TEST-02",
+      "nom": "Clàudia (Estudiant)",
+      "posicio_spawn_id": 2,
+      "tipus_testimoni": "pista_caracteristica",
+      "objecte_requerit_id": "OBJ-01",
+      "missatge_sense_objecte": "La Clàudia ha trobat un full en blanc sobre el faristol. Necessites les 'Ulleres UV' per revelar-ne el text.",
+      "pista": {
+        "caracteristica": "ulleres",
+        "valor_afirmat": true,
+        "text": "Sota la llum ultraviolada es llegeix: 'Li van caure les ulleres mentre fugia, però les va recollir'."
+      }
+    },
+    {
+      "id": "TEST-03",
+      "nom": "Pol (Manteniment)",
+      "posicio_spawn_id": 3,
+      "tipus_testimoni": "pista_caracteristica",
+      "objecte_requerit_id": null,
+      "missatge_sense_objecte": null,
+      "pista": {
+        "caracteristica": "bigotis",
+        "valor_afirmat": false,
+        "text": "Vaig creuar-me amb el sospitós a les escales i NO portava bigotis."
+      }
+    },
+    {
+      "id": "TEST-04",
+      "nom": "Aina (Investigadora)",
+      "posicio_spawn_id": 4,
+      "tipus_testimoni": "pista_caracteristica",
+      "objecte_requerit_id": "OBJ-02",
+      "missatge_sense_objecte": "L'Aina assenyala un mirall trencat al passadís. Necessites la 'Lupa de Detectiu' per veure el reflex gravat a la pols.",
+      "pista": {
+        "caracteristica": "cicatriu",
+        "valor_afirmat": true,
+        "text": "Amb la lupa s'aprecia un tret inconfusible: El lladre TENIA una cicatriu visible."
+      }
+    },
+    {
+      "id": "TEST-05",
+      "nom": "Turista Perdut",
+      "posicio_spawn_id": 5,
+      "tipus_testimoni": "sense_valor",
+      "objecte_requerit_id": null,
+      "missatge_sense_objecte": null,
+      "pista": {
+        "text": "Perdoni, em podria dir per on s'arriba a la catedral?"
+      }
+    },
+    {
+      "id": "TEST-06",
+      "nom": "Fornera del Barri",
+      "posicio_spawn_id": 6,
+      "tipus_testimoni": "sense_valor",
+      "objecte_requerit_id": null,
+      "missatge_sense_objecte": null,
+      "pista": {
+        "text": "Fa una olor de pa acabat de fer que alimenta només de passar-hi."
+      }
+    },
+    {
+      "id": "TEST-07",
+      "nom": "Col·leccionista Privat",
+      "posicio_spawn_id": 7,
+      "tipus_testimoni": "pista_ubicacio",
+      "objecte_requerit_id": "OBJ-03",
+      "missatge_sense_objecte": "El col·leccionista ha rebut un telegrama encriptat amb l'oferta de venda. Necessites el 'Decodificador' per llegir-lo.",
+      "pista": {
+        "lugar": "Oest",
+        "text": "Telegrama traduït: 'L'intercanvi del manuscrit es farà aquesta nit al sector Oest'."
+      }
+    },
+    {
+      "id": "TEST-08",
+      "nom": "Vell Professor",
+      "posicio_spawn_id": 8,
+      "tipus_testimoni": "pista_refutacio",
+      "objecte_requerit_id": null,
+      "missatge_sense_objecte": null,
+      "pista": {
+        "testigo_refutado_id": "TEST-01",
+        "text": "El Sr. Esteve (Testimoni 1) hi veu molt poc i s'equivoca: el que ha dit és fals, la veritat és just el contrari!"
+      }
+    }
+  ]
+}

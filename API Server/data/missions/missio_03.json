@@ -1,0 +1,129 @@
+{
+  "missio": {
+    "id": "MIS-003",
+    "titol": "El Secret de la Caixa Forta",
+    "descripcio": "Algú ha buidat la caixa forta del Banc Central sense fer saltar l'alarma. Investiga les pistes, interroga als 8 testimonis i localitza el lladre."
+  },
+  "resolucio": {
+    "culpable_id": "SOSP-05",
+    "lloc_ocultacio": "Est",
+    "explicacio": "Eudald Puig (El Tenebrós) s'oculta al sector Est. El testimoni 3 mentia (afirmava que NO portava bigotis), com va revelar el testimoni 8."
+  },
+  "objectes_mapa": [
+    {
+      "id": "OBJ-01",
+      "nom": "Ulleres UV",
+      "descripcio": "Permeten llegir missatges escrits amb tinta invisible."
+    },
+    {
+      "id": "OBJ-02",
+      "nom": "Lupa de Detectiu",
+      "descripcio": "Permet examinar empremtes dactilars i detalls fins."
+    },
+    {
+      "id": "OBJ-03",
+      "nom": "Decodificador",
+      "descripcio": "Traductor de claus i notes encriptades."
+    }
+  ],
+  "testimonis": [
+    {
+      "id": "TEST-01",
+      "nom": "Sr. Mateu (Director del Banc)",
+      "posicio_spawn_id": 1,
+      "tipus_testimoni": "pista_caracteristica",
+      "objecte_requerit_id": null,
+      "missatge_sense_objecte": null,
+      "pista": {
+        "caracteristica": "barret",
+        "valor_afirmat": true,
+        "text": "Vaig veure una silueta fugint pel carreró i juraria que PORTAVA barret."
+      }
+    },
+    {
+      "id": "TEST-02",
+      "nom": "Gemma (Caixera)",
+      "posicio_spawn_id": 2,
+      "tipus_testimoni": "pista_caracteristica",
+      "objecte_requerit_id": "OBJ-01",
+      "missatge_sense_objecte": "La Gemma ha trobat un bitllet marcat al taulell. Necessites les 'Ulleres UV' per veure el missatge ocult.",
+      "pista": {
+        "caracteristica": "ulleres",
+        "valor_afirmat": false,
+        "text": "La tinta invisible del bitllet diu: 'El còmplice confirma que el lladre NO porta ulleres'."
+      }
+    },
+    {
+      "id": "TEST-03",
+      "nom": "Biel (Missatger)",
+      "posicio_spawn_id": 3,
+      "tipus_testimoni": "pista_caracteristica",
+      "objecte_requerit_id": null,
+      "missatge_sense_objecte": null,
+      "pista": {
+        "caracteristica": "bigotis",
+        "valor_afirmat": false,
+        "text": "Va xocar amb mi a la cantonada i et puc assegurar que NO portava bigotis."
+      }
+    },
+    {
+      "id": "TEST-04",
+      "nom": "Dra. Ferrer (Forense)",
+      "posicio_spawn_id": 4,
+      "tipus_testimoni": "pista_caracteristica",
+      "objecte_requerit_id": "OBJ-02",
+      "missatge_sense_objecte": "La forense analitza una fotografia borrosa de la càmera. Necessites la 'Lupa de Detectiu' per examinar el rostre.",
+      "pista": {
+        "caracteristica": "cicatriu",
+        "valor_afirmat": false,
+        "text": "Ampliant la imatge amb la lupa queda clar: La pell del sospitós NO té cap cicatriu."
+      }
+    },
+    {
+      "id": "TEST-05",
+      "nom": "Cambrer de la Cafeteria",
+      "posicio_spawn_id": 5,
+      "tipus_testimoni": "sense_valor",
+      "objecte_requerit_id": null,
+      "missatge_sense_objecte": null,
+      "pista": {
+        "text": "Avui s'han acabat els croissants abans de les nou del matí."
+      }
+    },
+    {
+      "id": "TEST-06",
+      "nom": "Músic de Carrer",
+      "posicio_spawn_id": 6,
+      "tipus_testimoni": "sense_valor",
+      "objecte_requerit_id": null,
+      "missatge_sense_objecte": null,
+      "pista": {
+        "text": "Estava tocant el saxofon i amb el soroll no he sentit res estrany."
+      }
+    },
+    {
+      "id": "TEST-07",
+      "nom": "Espia Retirat",
+      "posicio_spawn_id": 7,
+      "tipus_testimoni": "pista_ubicacio",
+      "objecte_requerit_id": "OBJ-03",
+      "missatge_sense_objecte": "L'espia et lliura una llibreta amb coordenades codificades. Necessites el 'Decodificador' per llegir-la.",
+      "pista": {
+        "lugar": "Est",
+        "text": "Coordenades traduïdes: 'El refugi del culpable es troba a la zona industrial del sector Est'."
+      }
+    },
+    {
+      "id": "TEST-08",
+      "nom": "Endevina de la Plaça",
+      "posicio_spawn_id": 8,
+      "tipus_testimoni": "pista_refutacio",
+      "objecte_requerit_id": null,
+      "missatge_sense_objecte": null,
+      "pista": {
+        "testigo_refutado_id": "TEST-03",
+        "text": "Compte amb el missatger Biel (Testimoni 3)! Menteix com un bellaco i ha dit el contrari de la realitat."
+      }
+    }
+  ]
+}

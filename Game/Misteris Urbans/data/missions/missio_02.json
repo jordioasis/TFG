@@ -1,0 +1,129 @@
+{
+  "missio": {
+    "id": "MIS-005",
+    "titol": "L'Assalt al Laboratori Secret",
+    "descripcio": "La fórmula experimental d'energia neta ha estat robada del laboratori. Analitza l'escena, interroga els 8 testimonis i descobreix qui l'ha robada."
+  },
+  "resolucio": {
+    "culpable_id": "SOSP-12",
+    "lloc_ocultacio": "Nord",
+    "explicacio": "Elena Boix (La Flama) s'oculta al sector Nord. El testimoni 3 mentia (afirmava que PORTAVA bigotis), com va avisar el testimoni 8."
+  },
+  "objectes_mapa": [
+    {
+      "id": "OBJ-01",
+      "nom": "Ulleres UV",
+      "descripcio": "Permeten llegir missatges escrits amb tinta invisible."
+    },
+    {
+      "id": "OBJ-02",
+      "nom": "Lupa de Detectiu",
+      "descripcio": "Permet examinar empremtes dactilars i detalls fins."
+    },
+    {
+      "id": "OBJ-03",
+      "nom": "Decodificador",
+      "descripcio": "Traductor de claus i notes encriptades."
+    }
+  ],
+  "testimonis": [
+    {
+      "id": "TEST-01",
+      "nom": "Dr. Rovira (Científic en Cap)",
+      "posicio_spawn_id": 1,
+      "tipus_testimoni": "pista_caracteristica",
+      "objecte_requerit_id": null,
+      "missatge_sense_objecte": null,
+      "pista": {
+        "caracteristica": "barret",
+        "valor_afirmat": false,
+        "text": "L'intrus anava amb els cabells descoberts, et confirmo que NO portava barret."
+      }
+    },
+    {
+      "id": "TEST-02",
+      "nom": "Laia (Tècnica de Laboratori)",
+      "posicio_spawn_id": 2,
+      "tipus_testimoni": "pista_caracteristica",
+      "objecte_requerit_id": "OBJ-01",
+      "missatge_sense_objecte": "La Laia ha vist un rastre químic a la bata blanca. Necessites les 'Ulleres UV' per inspeccionar-lo.",
+      "pista": {
+        "caracteristica": "ulleres",
+        "valor_afirmat": false,
+        "text": "L'informe químic revela: 'Sense reflexos de lents, el sospitós NO porta ulleres'."
+      }
+    },
+    {
+      "id": "TEST-03",
+      "nom": "Arnau (Becari)",
+      "posicio_spawn_id": 3,
+      "tipus_testimoni": "pista_caracteristica",
+      "objecte_requerit_id": null,
+      "missatge_sense_objecte": null,
+      "pista": {
+        "caracteristica": "bigotis",
+        "valor_afirmat": true,
+        "text": "El vaig veure saltar la tanca i tenia uns grans bigotis!"
+      }
+    },
+    {
+      "id": "TEST-04",
+      "nom": "Inspectors de Seguretat",
+      "posicio_spawn_id": 4,
+      "tipus_testimoni": "pista_caracteristica",
+      "objecte_requerit_id": "OBJ-02",
+      "missatge_sense_objecte": "Hi ha una captura de vídeo d'alta definició al monitor. Necessites la 'Lupa de Detectiu' per mirar-la de prop.",
+      "pista": {
+        "caracteristica": "cicatriu",
+        "valor_afirmat": false,
+        "text": "En observar el rostre amb la lupa es veu net: El culpable NO té cap cicatriu."
+      }
+    },
+    {
+      "id": "TEST-05",
+      "nom": "Conductora d'Autobús",
+      "posicio_spawn_id": 5,
+      "tipus_testimoni": "sense_valor",
+      "objecte_requerit_id": null,
+      "missatge_sense_objecte": null,
+      "pista": {
+        "text": "La línia 4 porta deu minuts de retard per obres al clavegueram."
+      }
+    },
+    {
+      "id": "TEST-06",
+      "nom": "Venador de Castanyes",
+      "posicio_spawn_id": 6,
+      "tipus_testimoni": "sense_valor",
+      "objecte_requerit_id": null,
+      "missatge_sense_objecte": null,
+      "pista": {
+        "text": "Avui fa un fred que pela, però de lladres no n'he vist cap."
+      }
+    },
+    {
+      "id": "TEST-07",
+      "nom": "Agent Infiltrat",
+      "posicio_spawn_id": 7,
+      "tipus_testimoni": "pista_ubicacio",
+      "objecte_requerit_id": "OBJ-03",
+      "missatge_sense_objecte": "L'agent et passa un disc dur encriptat amb la ruta d'escapada. Necessites el 'Decodificador' per obrir-lo.",
+      "pista": {
+        "lugar": "Nord",
+        "text": "Arxiu desxifrat: 'La fuga acaba als antics túnels del sector Nord'."
+      }
+    },
+    {
+      "id": "TEST-08",
+      "nom": "Cap de Seguretat",
+      "posicio_spawn_id": 8,
+      "tipus_testimoni": "pista_refutacio",
+      "objecte_requerit_id": null,
+      "missatge_sense_objecte": null,
+      "pista": {
+        "testigo_refutado_id": "TEST-03",
+        "text": "El becari Arnau (Testimoni 3) s'ha posat nerviós i ha mentit: la realitat és exactament el contrari del que ha dit."
+      }
+    }
+  ]
+}

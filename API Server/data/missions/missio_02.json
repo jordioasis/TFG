@@ -1,0 +1,129 @@
+{
+  "missio": {
+    "id": "MIS-002",
+    "titol": "El Misteri del Quadre Desaparegut",
+    "descripcio": "Han sostret l'obra mestra de la Galeria d'Art Modern. Recull els estris d'investigació, parla amb els 8 testimonis i esbrina qui ha estat i a quin sector s'amaga."
+  },
+  "resolucio": {
+    "culpable_id": "SOSP-06",
+    "lloc_ocultacio": "Sud",
+    "explicacio": "Mireia Roca (La Bicicleta) s'oculta al sector Sud. El testimoni 1 mentia (deia que NO portava ulleres), tal com ha confirmat el testimoni 8."
+  },
+  "objectes_mapa": [
+    {
+      "id": "OBJ-01",
+      "nom": "Ulleres UV",
+      "descripcio": "Permeten llegir missatges escrits amb tinta invisible."
+    },
+    {
+      "id": "OBJ-02",
+      "nom": "Lupa de Detectiu",
+      "descripcio": "Permet examinar empremtes dactilars i detalls fins."
+    },
+    {
+      "id": "OBJ-03",
+      "nom": "Decodificador",
+      "descripcio": "Traductor de claus i notes encriptades."
+    }
+  ],
+  "testimonis": [
+    {
+      "id": "TEST-01",
+      "nom": "Sra. Carme (Comissària d'Art)",
+      "posicio_spawn_id": 1,
+      "tipus_testimoni": "pista_caracteristica",
+      "objecte_requerit_id": null,
+      "missatge_sense_objecte": null,
+      "pista": {
+        "caracteristica": "ulleres",
+        "valor_afirmat": false,
+        "text": "El lladre va sortir corrents per la porta principal i estic segura que NO portava ulleres."
+      }
+    },
+    {
+      "id": "TEST-02",
+      "nom": "Pere (Restaurador)",
+      "posicio_spawn_id": 2,
+      "tipus_testimoni": "pista_caracteristica",
+      "objecte_requerit_id": "OBJ-01",
+      "missatge_sense_objecte": "En Pere assenyala el marc buit on hi ha marques brillants. Necessites les 'Ulleres UV' per llegir la pista.",
+      "pista": {
+        "caracteristica": "barret",
+        "valor_afirmat": false,
+        "text": "La marca UV al marc indica: 'Cap ombra de barret a les càmeres, anava amb el cap descobert'."
+      }
+    },
+    {
+      "id": "TEST-03",
+      "nom": "Núria (Recepcionista)",
+      "posicio_spawn_id": 3,
+      "tipus_testimoni": "pista_caracteristica",
+      "objecte_requerit_id": null,
+      "missatge_sense_objecte": null,
+      "pista": {
+        "caracteristica": "bigotis",
+        "valor_afirmat": false,
+        "text": "Li vaig veure la cara ben de prop al passadís: tenia la cara afaitada, NO portava bigotis."
+      }
+    },
+    {
+      "id": "TEST-04",
+      "nom": "Oriol (Vigilant Nocturn)",
+      "posicio_spawn_id": 4,
+      "tipus_testimoni": "pista_caracteristica",
+      "objecte_requerit_id": "OBJ-02",
+      "missatge_sense_objecte": "L'Oriol ha trobat un retrat robot esquinçat a terra. Necessites la 'Lupa de Detectiu' per analitzar-lo.",
+      "pista": {
+        "caracteristica": "cicatriu",
+        "valor_afirmat": true,
+        "text": "En mirar els detalls amb la lupa es veu clarament: El sospitós TENIA una cicatriu marcada."
+      }
+    },
+    {
+      "id": "TEST-05",
+      "nom": "Jardinera del Parc",
+      "posicio_spawn_id": 5,
+      "tipus_testimoni": "sense_valor",
+      "objecte_requerit_id": null,
+      "missatge_sense_objecte": null,
+      "pista": {
+        "text": "He estat podant els arbustos tota la tarda i només he vist coloms."
+      }
+    },
+    {
+      "id": "TEST-06",
+      "nom": "Repartidor de Paquets",
+      "posicio_spawn_id": 6,
+      "tipus_testimoni": "sense_valor",
+      "objecte_requerit_id": null,
+      "missatge_sense_objecte": null,
+      "pista": {
+        "text": "Amb aquest trànsit és impossible aparcar la furgoneta al centre!"
+      }
+    },
+    {
+      "id": "TEST-07",
+      "nom": "Hacker Anònim",
+      "posicio_spawn_id": 7,
+      "tipus_testimoni": "pista_ubicacio",
+      "objecte_requerit_id": "OBJ-03",
+      "missatge_sense_objecte": "El hacker ha interceptat un senyal de ràdio xifrat. Necessites el 'Decodificador' per traduir-lo.",
+      "pista": {
+        "lugar": "Sud",
+        "text": "Missatge desxifrat: 'La mercaderia està amagada als molls del port, al sector Sud'."
+      }
+    },
+    {
+      "id": "TEST-08",
+      "nom": "Antiga Arxivera",
+      "posicio_spawn_id": 8,
+      "tipus_testimoni": "pista_refutacio",
+      "objecte_requerit_id": null,
+      "missatge_sense_objecte": null,
+      "pista": {
+        "testigo_refutado_id": "TEST-01",
+        "text": "No et fiïs de la Sra. Carme (Testimoni 1)! Sempre s'inventa detalls i ha dit just el contrari de la veritat."
+      }
+    }
+  ]
+}

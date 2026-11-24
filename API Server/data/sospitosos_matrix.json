@@ -1,0 +1,142 @@
+{
+  "caracteristiques_base": [
+    "barret",
+    "ulleres",
+    "bigotis",
+    "cicatriu"
+  ],
+  "sospitosos": [
+    {
+      "id": "SOSP-01",
+      "nom": "Pau Bosc",
+      "alias": "El Cap",
+      "trets": {
+        "barret": true,
+        "ulleres": true,
+        "bigotis": true,
+        "cicatriu": true
+      }
+    },
+    {
+      "id": "SOSP-02",
+      "nom": "Laura Valls",
+      "alias": "L'Ombra",
+      "trets": {
+        "barret": true,
+        "ulleres": true,
+        "bigotis": false,
+        "cicatriu": false
+      }
+    },
+    {
+      "id": "SOSP-03",
+      "nom": "Marc Soler",
+      "alias": "El Camalió",
+      "trets": {
+        "barret": false,
+        "ulleres": true,
+        "bigotis": true,
+        "cicatriu": false
+      }
+    },
+    {
+      "id": "SOSP-04",
+      "nom": "Clara Pons",
+      "alias": "La Guineu",
+      "trets": {
+        "barret": false,
+        "ulleres": false,
+        "bigotis": false,
+        "cicatriu": true
+      }
+    },
+    {
+      "id": "SOSP-05",
+      "nom": "Eudald Puig",
+      "alias": "El Tenebrós",
+      "trets": {
+        "barret": true,
+        "ulleres": false,
+        "bigotis": true,
+        "cicatriu": false
+      }
+    },
+    {
+      "id": "SOSP-06",
+      "nom": "Mireia Roca",
+      "alias": "La Bicicleta",
+      "trets": {
+        "barret": false,
+        "ulleres": true,
+        "bigotis": false,
+        "cicatriu": true
+      }
+    },
+    {
+      "id": "SOSP-07",
+      "nom": "Anna Noguera",
+      "alias": "La Vidua",
+      "trets": {
+        "barret": true,
+        "ulleres": false,
+        "bigotis": false,
+        "cicatriu": true
+      }
+    },
+    {
+      "id": "SOSP-08",
+      "nom": "Sergi Grau",
+      "alias": "El Zorro",
+      "trets": {
+        "barret": false,
+        "ulleres": false,
+        "bigotis": true,
+        "cicatriu": false
+      }
+    },
+    {
+      "id": "SOSP-09",
+      "nom": "Sònia Mas",
+      "alias": "La Daga",
+      "trets": {
+        "barret": true,
+        "ulleres": true,
+        "bigotis": false,
+        "cicatriu": true
+      }
+    },
+    {
+      "id": "SOSP-10",
+      "nom": "Jordi Font",
+      "alias": "El Llest",
+      "trets": {
+        "barret": false,
+        "ulleres": true,
+        "bigotis": true,
+        "cicatriu": true
+      }
+    },
+    {
+      "id": "SOSP-11",
+      "nom": "Xavi Torrent",
+      "alias": "El Talp",
+      "trets": {
+        "barret": true,
+        "ulleres": true,
+        "bigotis": true,
+        "cicatriu": false
+      }
+    },
+    {
+      "id": "SOSP-12",
+      "nom": "Elena Boix",
+      "alias": "La Flama",
+      "trets": {
+        "barret": false,
+        "ulleres": false,
+        "bigotis": false,
+        "cicatriu": false
+      }
+    }
+  ]
+}
