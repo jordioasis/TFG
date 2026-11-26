@@ -23,6 +23,8 @@ func _ready():
 	add_child(hud_instance)
 	assignar_testimonis_edificis()
 	assignar_objectes_posicions()
+	CaseManager.pausar_temps()
+
 	hud_instance.add_title(CaseManager.current_case_data.get("missio", {}).get("titol", "Missió sense titol"))
 	hud_instance.add_text(CaseManager.current_case_data.get("missio", {}).get("descripcio", "Missió sense descripcio"))
 	hud_instance.show_textbox()
@@ -74,6 +76,7 @@ func _unhandled_input(event):
 func tornar_al_menu():
 	get_tree().paused = false
 	CaseManager.is_game_active = false
+	esperant_inici = true
 	get_tree().change_scene("res://levels/menu/menu.tscn")
 
 func assignar_testimonis_edificis():
