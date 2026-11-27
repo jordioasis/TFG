@@ -15,6 +15,8 @@ var is_game_active: bool = false
 var timer_node: Timer = null
 var posicio_player = null
 
+var resolucio_actual: Dictionary = {}
+var partida_guanyada: bool = false
 	
 func _ready() -> void:			
 	load_suspects_matrix(SUSPECTS_MATRIX_PATH)
@@ -42,6 +44,14 @@ func iniciar_temps(segons: float) -> void:
 	time_remaining = int(segons)
 	is_game_active = true
 	timer_node.start()
+
+func comprovar_acusacio(sospitos_id_triat: String, lloc_triat: String) -> bool:
+	var culpable_real = resolucio_actual.get("culpable_id", "")
+	var lloc_real = resolucio_actual.get("lloc_ocultacio", "")
+	
+	partida_guanyada = (sospitos_id_triat == culpable_real) and (lloc_triat == lloc_real)
+	return partida_guanyada
+
 
 func pausar_temps() -> void:
 	is_game_active = false

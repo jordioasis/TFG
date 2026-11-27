@@ -35,7 +35,7 @@ func _on_btnSortir_pressed():
 	get_tree().quit()
 
 
-func _on_HTTPRequest_request_completed(result: int, response_code: int, headers: PoolStringArray, body: PoolByteArray):
+func _on_HTTPRequest_request_completed(result: int, response_code: int, _headers: PoolStringArray, body: PoolByteArray):
 	boto_aleatoria.disabled = false
 	
 	if result != HTTPRequest.RESULT_SUCCESS or response_code != 200:

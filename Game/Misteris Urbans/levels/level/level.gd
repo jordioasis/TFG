@@ -14,6 +14,8 @@ var decodificador_instance = decodificador_scene.instance()
 
 onready var llibretaPistes = preload ("res://levels/level/LlistaPistes.tscn")
 onready var sospitosos = preload ("res://levels/level/PantallaSospitosos.tscn")
+onready var acusacioscn = preload ("res://entities/HUD/acusacio.tscn")
+
 
 onready var mi_label = $CanvasSuperior/BarraSuperior/Marge/ContenedorHoritzontal/LabelTemps
 
@@ -43,7 +45,9 @@ func _process(_delta: float) -> void:
 		obrir_llibreta()
 	if !esperant_inici and Input.is_action_just_pressed("sospitosos"):
 		obrir_sospitosos()
-
+	if !esperant_inici and Input.is_action_just_pressed("acusacio"):
+		obrir_acusacio()
+		
 func obrir_llibreta():
 	CaseManager.pausar_temps()
 	var llibreta = llibretaPistes.instance()
@@ -68,6 +72,17 @@ func obrir_sospitosos():
 	
 	get_tree().paused = true
 
+func obrir_acusacio():
+	CaseManager.pausar_temps()
+	var acusacio = acusacioscn.instance()
+
+	var capa_ui = CanvasLayer.new()
+	capa_ui.name = "CapaAcusacio"
+	capa_ui.layer = 10 # Assegurem que quedi a sobre de tot
+	get_tree().current_scene.add_child(capa_ui)
+	capa_ui.add_child(acusacio)
+	
+	get_tree().paused = true
 
 func _unhandled_input(event):
 	if event.is_action_pressed("ui_cancel"): # "ui_cancel" viene asignado a ESC por defecto en Godot
