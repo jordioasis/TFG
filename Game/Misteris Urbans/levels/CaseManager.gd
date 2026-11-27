@@ -107,6 +107,7 @@ func load_case_from_json_string(json_string: String) -> bool:
 		return false
 
 	current_case_data = parse_result.result
+	resolucio_actual = current_case_data.get("resolucio", {})
 	collected_clues.clear()
 	
 	# Extraer metadatos y tiempo límite (por defecto 300s = 5 min)
@@ -122,7 +123,18 @@ func load_case_from_json_string(json_string: String) -> bool:
 	print("CaseManager: Cas '", titulo_mision, "' carregat amb exit.")
 	return true
 
+func tornar_al_menu():
+	get_tree().paused = false
+	CaseManager.is_game_active = false
+	get_tree().change_scene("res://levels/menu/menu.tscn")
 
+
+func get_nom_sospitos_per_id(id_buscat: String) -> String:
+	for sospitos in suspects_matrix:
+		if sospitos.get("id", "") == id_buscat:
+			return sospitos.get("nom", "Desconegut")
+	return "Desconegut"
+	
 # Carga una misión desde un archivo .json local (p. ej., res://data/misiones/mision_01.json)
 func load_case_from_file(file_path: String) -> bool:
 	var file: File = File.new()

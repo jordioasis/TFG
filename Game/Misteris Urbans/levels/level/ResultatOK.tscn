@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://levels/level/ResultatOK.gd" type="Script" id=1]
+[ext_resource path="res://levels/menu/portada.png" type="Texture" id=2]
+[ext_resource path="res://entities/HUD/llibretaFons.png" type="Texture" id=3]
+[ext_resource path="res://levels/level/OK.png" type="Texture" id=4]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+pause_mode = 2
+script = ExtResource( 1 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 640.0
+margin_bottom = 369.0
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+margin_left = -10.0
+margin_top = -36.0
+margin_right = 683.0
+margin_bottom = 395.0
+texture = ExtResource( 3 )
+expand = true
+
+[node name="ContainerPistes" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -149.0
+margin_right = 188.0
+margin_bottom = 40.0
+
+[node name="Control" type="Control" parent="ContainerPistes"]
+margin_right = 337.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 0, 50 )
+
+[node name="Ok" type="Sprite" parent="ContainerPistes"]
+position = Vector2( 238, 50.9999 )
+scale = Vector2( 0.0790001, 0.065 )
+texture = ExtResource( 4 )
+centered = false
