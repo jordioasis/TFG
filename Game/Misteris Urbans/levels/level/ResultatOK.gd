@@ -51,7 +51,7 @@ func _unhandled_input(event):
 	if event.is_action_pressed("ui_cancel"):
 		get_tree().set_input_as_handled()
 		tornar_al_menu()
-	elif event.is_action_pressed("ui_accept"):
+	elif event.is_action_pressed("ui_accept") and not event.is_echo():
 		get_tree().set_input_as_handled()
 		carregar_missio_2()
 	

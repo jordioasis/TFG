@@ -117,6 +117,7 @@ func load_case_from_json_string(json_string: String) -> bool:
 	time_remaining = metadatos.get("temps_limit_segons", 300)
 	
 	is_game_active = true
+	esperant_inici = true
 	
 	emit_signal("case_loaded", current_case_data)
 	emit_signal("time_updated", time_remaining)
