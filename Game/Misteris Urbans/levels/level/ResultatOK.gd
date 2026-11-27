@@ -7,6 +7,7 @@ extends CanvasLayer
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+
 	
 	var vbox = $ContainerPistes
 	var resolucio: Dictionary = CaseManager.resolucio_actual
@@ -40,7 +41,7 @@ func _ready():
 	vbox.add_child(espaiador.duplicate())
 	#  LABEL 3: -Missatge user
 	var label_next := Label.new()
-	label_next.text = "Pulsa Enter per a següent missió.\nPulsa Esc per tornar al menú principal."
+	label_next.text = "Pulsa (N) per a Nova missió.\nPulsa Esc per tornar al menú principal."
 	label_next.autowrap = true
 	label_next.rect_min_size.x = 330
 	label_next.add_color_override("font_color", Color.black)
@@ -51,7 +52,7 @@ func _unhandled_input(event):
 	if event.is_action_pressed("ui_cancel"):
 		get_tree().set_input_as_handled()
 		tornar_al_menu()
-	elif event.is_action_pressed("ui_accept") and not event.is_echo():
+	elif event.is_action_pressed("seguent_missio"):
 		get_tree().set_input_as_handled()
 		carregar_missio_2()
 	

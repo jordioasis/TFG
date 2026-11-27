@@ -21,7 +21,10 @@ onready var mi_label = $CanvasSuperior/BarraSuperior/Marge/ContenedorHoritzontal
 
 #onready var esperant_inici = true
 
-func _ready():
+func _ready():	
+		
+	CaseManager.connect("time_expired", self, "_on_temps_esgotat")
+	
 	add_child(hud_instance)
 	assignar_testimonis_edificis()
 	assignar_objectes_posicions()
@@ -32,9 +35,14 @@ func _ready():
 	hud_instance.show_textbox()
 
 
+func _on_temps_esgotat() -> void:
+	get_tree().paused = false
+	get_tree().change_scene("res://levels/level/ResultatKO.tscn")
+
 func iniciar_partida():
 	hud_instance.hide_textbox()
 	CaseManager.iniciar_temps(300)
+
 
 func _process(_delta: float) -> void:
 	if CaseManager.esperant_inici and Input.is_action_just_pressed("ui_accept"):
