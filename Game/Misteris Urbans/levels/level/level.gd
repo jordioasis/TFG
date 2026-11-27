@@ -19,7 +19,7 @@ onready var acusacioscn = preload ("res://entities/HUD/acusacio.tscn")
 
 onready var mi_label = $CanvasSuperior/BarraSuperior/Marge/ContenedorHoritzontal/LabelTemps
 
-onready var esperant_inici = true
+#onready var esperant_inici = true
 
 func _ready():
 	add_child(hud_instance)
@@ -37,15 +37,15 @@ func iniciar_partida():
 	CaseManager.iniciar_temps(300)
 
 func _process(_delta: float) -> void:
-	if esperant_inici and Input.is_action_just_pressed("ui_accept"):
-		esperant_inici = false
+	if CaseManager.esperant_inici and Input.is_action_just_pressed("ui_accept"):
+		CaseManager.esperant_inici = false
 		iniciar_partida()
 	mi_label.text = CaseManager.obtir_temps()
-	if !esperant_inici and Input.is_action_just_pressed("obrir_llibreta"):
+	if !CaseManager.esperant_inici and Input.is_action_just_pressed("obrir_llibreta"):
 		obrir_llibreta()
-	if !esperant_inici and Input.is_action_just_pressed("sospitosos"):
+	if !CaseManager.esperant_inici and Input.is_action_just_pressed("sospitosos"):
 		obrir_sospitosos()
-	if !esperant_inici and Input.is_action_just_pressed("acusacio"):
+	if !CaseManager.esperant_inici and Input.is_action_just_pressed("acusacio"):
 		obrir_acusacio()
 		
 func obrir_llibreta():
@@ -91,7 +91,7 @@ func _unhandled_input(event):
 func tornar_al_menu():
 	get_tree().paused = false
 	CaseManager.is_game_active = false
-	esperant_inici = true
+	CaseManager.esperant_inici = true
 	get_tree().change_scene("res://levels/menu/menu.tscn")
 
 func assignar_testimonis_edificis():

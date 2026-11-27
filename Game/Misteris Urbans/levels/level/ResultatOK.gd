@@ -57,12 +57,12 @@ func _unhandled_input(event):
 	
 func carregar_missio_2():
 	get_tree().paused = false 
-	waiting = true
+	CaseManager.esperant_inici=true
 	CaseManager.load_case_from_file("res://data/missions/missio_02.json")
 	get_tree().change_scene("res://levels/level/level.tscn")
 
 func tornar_al_menu():
 	get_tree().paused = false
 	CaseManager.is_game_active = false
-	waiting = true
+	CaseManager.esperant_inici=true
 	get_tree().change_scene("res://levels/menu/menu.tscn")

@@ -15,6 +15,8 @@ var is_game_active: bool = false
 var timer_node: Timer = null
 var posicio_player = null
 
+onready var esperant_inici = true
+
 var resolucio_actual: Dictionary = {}
 var partida_guanyada: bool = false
 	
