@@ -20,10 +20,8 @@ func _ready():
 
 
 func _on_AreaEntrada_body_entered(object):
-	var nova_pista: Dictionary = {
-	"testimoni": nomTestimoni,
-	"text": pista
-}
+	var nova_pista = nomTestimoni + " - " + pista
+
 	if object.is_in_group("player"):
 		var parent = get_parent()
 		parent.get_parent().setWitnessName(nomTestimoni)
