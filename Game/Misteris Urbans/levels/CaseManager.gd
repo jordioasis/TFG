@@ -64,8 +64,8 @@ func reanudar_temps() -> void:
 
 func obtir_temps() -> String:
 	var total_segons: int = int(ceil(time_remaining))
-	var minuts: int = total_segons / 60
-	var segons: int = total_segons % 60
+	var minuts = int(total_segons / 60.0)
+	var segons = int(total_segons % 60)
 	return "%02d:%02d" % [minuts, segons]
 	
 func comprobar_objecte_disponible(objecte: String) -> bool:
@@ -73,6 +73,10 @@ func comprobar_objecte_disponible(objecte: String) -> bool:
 		if objecte == collected_objects[i]:
 			return true
 	return false
+	
+	
+func get_collected_clues() -> Array:
+	return collected_clues
 	
 func load_suspects_matrix(file_path: String) -> bool:
 	var file: File = File.new()

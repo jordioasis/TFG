@@ -7,6 +7,8 @@ var pista = "Clue text"
 var missatge_sense_objecte = ""
 var objecte = "res"
 
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -18,22 +20,26 @@ func _ready():
 
 
 func _on_AreaEntrada_body_entered(object):
+	var nova_pista: Dictionary = {
+	"testimoni": nomTestimoni,
+	"text": pista
+}
 	if object.is_in_group("player"):
 		var parent = get_parent()
 		parent.get_parent().setWitnessName(nomTestimoni)
 		if(objecte != "Null"):
 			if CaseManager.comprobar_objecte_disponible(objecte):
 				parent.get_parent().setClue(pista)
-				if not CaseManager.collected_clues.has(pista):
-					CaseManager.collected_clues.append(pista)
+				if not CaseManager.collected_clues.has(nova_pista):
+					CaseManager.collected_clues.append(nova_pista)
 				else:
 					print("Aquesta pista ja la tens!")
 			else:
 				parent.get_parent().setClue(str(missatge_sense_objecte))
 		else:
 			parent.get_parent().setClue(pista)
-			if not CaseManager.collected_clues.has(pista):
-				CaseManager.collected_clues.append(pista)
+			if not CaseManager.collected_clues.has(nova_pista):
+				CaseManager.collected_clues.append(nova_pista)
 			else:
 				print("Aquesta pista ja la tens!")
 		parent.get_parent().muestraTexto()

@@ -31,7 +31,7 @@ func _ready():
 	CaseManager.pausar_temps()
 
 	hud_instance.add_title(CaseManager.current_case_data.get("missio", {}).get("titol", "Missió sense titol"))
-	hud_instance.add_text(CaseManager.current_case_data.get("missio", {}).get("descripcio", "Missió sense descripcio"))
+	hud_instance.add_text("\n"+CaseManager.current_case_data.get("missio", {}).get("descripcio", "Missió sense descripcio")+"\n\n(A)cussació, (S)ospitosos, (L)libreta. (Enter)Per començar.")
 	hud_instance.show_textbox()
 
 

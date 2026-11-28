@@ -61,6 +61,7 @@ rect_min_size = Vector2( 70, 0 )
 margin_right = 70.0
 margin_bottom = 64.0
 rect_min_size = Vector2( 64, 64 )
+mouse_filter = 0
 texture = ExtResource( 4 )
 expand = true
 
@@ -82,6 +83,7 @@ rect_min_size = Vector2( 70, 0 )
 margin_right = 70.0
 margin_bottom = 64.0
 rect_min_size = Vector2( 64, 64 )
+mouse_filter = 0
 texture = ExtResource( 5 )
 expand = true
 
@@ -312,3 +314,5 @@ margin_bottom = 99.0
 text = "Elena Boix
 \"La Flama\""
 align = 1
+
+[connection signal="gui_input" from="Containersospitosos/SospitososFila1/Fitxa/TextureRect" to="." method="_on_TextureRect_gui_input"]
